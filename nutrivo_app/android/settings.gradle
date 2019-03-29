@@ -1,0 +1,3 @@
+rootProject.name = 'nutrivo_app'
+
+include ':app'
