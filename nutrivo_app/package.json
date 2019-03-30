@@ -8,8 +8,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "fetch": "^1.1.0",
     "react": "16.8.3",
-    "react-native": "0.59.2"
+    "react-native": "0.59.2",
+    "whatwg-fetch": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.4.0",
