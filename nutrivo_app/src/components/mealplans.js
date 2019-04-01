@@ -13,7 +13,7 @@ class MealPlans extends Component {
   }
 
   componentWillMount() {
-    axios.get('https://rallycoding.herokuapp.com/api/music_albums')
+    axios.get('https://api.myjson.com/bins/my70y')
       .then(response => this.setState({ meals: response.data }));
   }
 
