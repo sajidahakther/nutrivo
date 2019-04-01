@@ -31,7 +31,7 @@ const MealDetail = ({ meal1 }) => {
       <CardSection>
         <Button />
       </CardSection>
-      
+
     </Card>
   );
 };
