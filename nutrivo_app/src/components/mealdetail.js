@@ -1,11 +1,11 @@
 import React from 'react';
-import { Text, View, Image } from 'react-native';
+import { Text, View, Image, Linking } from 'react-native';
 import Card from './card';
 import CardSection from './cardsection';
 import Button from './button';
 
 const MealDetail = ({ meal1 }) => {
-  const { title, description, thumbnailimage, tags } = meal1;
+  const { title, description, thumbnailimage, tags, url } = meal1;
   const { mealThumbnail, likeButton, mealText, mealTitle, mealDescription, mealTags } = styles;
 
   return (
@@ -29,7 +29,9 @@ const MealDetail = ({ meal1 }) => {
       </CardSection>
 
       <CardSection>
-        <Button whenPressed={() => console.log(title)} />
+        <Button whenPressed={() => Linking.openURL(url)}>
+          View recipe
+        </Button>
       </CardSection>
 
     </Card>

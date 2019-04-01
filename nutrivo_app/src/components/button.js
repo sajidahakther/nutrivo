@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, TouchableOpacity } from 'react-native';
 
-const Button = ({ whenPressed }) => {
+const Button = ({ whenPressed, children }) => {
   const { buttonStyle, textStyle } = styles;
 
   return (
@@ -10,7 +10,7 @@ const Button = ({ whenPressed }) => {
       style={buttonStyle}
     >
       <Text style={textStyle}>
-        View recipe
+        {children}
       </Text>
     </TouchableOpacity>
   );
