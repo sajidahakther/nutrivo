@@ -3,7 +3,13 @@ import { View, Text } from 'react-native';
 import axios from 'axios';
 
 class MealPlans extends Component {
-  state = { meals: [] };
+  constructor(props) {
+    super(props);
+    this.state = {
+      meals: []
+    };
+    this.renderMeals = this.renderMeals.bind(this);
+  }
 
   componentWillMount() {
     axios.get('https://rallycoding.herokuapp.com/api/music_albums')
@@ -11,27 +17,23 @@ class MealPlans extends Component {
   }
 
   renderMeals() {
-    const { mealText } = styles;
-
-    this.state.meals.map(meal => <Text style={mealText}>{meal.title}</Text>);
+    return this.state.meals.map(meal => <Text>{meal.title}</Text>);
   }
 
   render() {
-    console.log(this.state);
-
     return (
       <View>
       {this.renderMeals()}
       </View>
     );
-}
+  }
 }
 
-const styles = {
-  mealText: {
-  paddingTop: 80,
-  color: '#000000'
-  }
-};
+// const styles = {
+//   mealText: {
+//   paddingTop: 80,
+//   color: '#000000'
+//   }
+// };
 
 export default MealPlans;
