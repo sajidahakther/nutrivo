@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, Image } from 'react-native';
 import Card from './card';
 import CardSection from './cardsection';
+import Button from './button';
 
 const MealDetail = ({ meal1 }) => {
   const { title, description, thumbnailimage, tags } = meal1;
@@ -9,12 +10,12 @@ const MealDetail = ({ meal1 }) => {
 
   return (
     <Card>
-    <View>
-      <Image
-        style={mealThumbnail}
-        source={{ uri: thumbnailimage }}
-      />
-    </View>
+      <View>
+        <Image
+          style={mealThumbnail}
+          source={{ uri: thumbnailimage }}
+        />
+      </View>
 
       <CardSection>
         <View>
@@ -26,6 +27,11 @@ const MealDetail = ({ meal1 }) => {
           <Text style={mealTags}>{tags}</Text>
         </View>
       </CardSection>
+
+      <CardSection>
+        <Button />
+      </CardSection>
+      
     </Card>
   );
 };
@@ -36,7 +42,7 @@ const styles = {
   },
   likeButton: {
     fontSize: 27,
-    color: '#ff0000',
+    color: '#ff0000', // red
   },
   mealText: {
     flexDirection: 'column',
