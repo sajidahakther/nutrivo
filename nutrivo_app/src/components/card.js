@@ -14,7 +14,7 @@ const styles = {
     borderWidth: 0.7,
     borderRadius: 2,
     borderColor: '#ddd',
-    borderBottomWidth: 0.7,
+    borderBottomWidth: 0.5,
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
@@ -22,7 +22,8 @@ const styles = {
     elevation: 1,
     marginLeft: 20,
     marginRight: 20,
-    marginTop: 20
+    marginTop: 20,
+    backgroundColor: '#fff'
   }
 };
 
