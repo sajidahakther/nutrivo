@@ -5,23 +5,25 @@ import CardSection from './cardsection';
 
 const MealDetail = ({ meal1 }) => {
   const { title, description, thumbnailimage, tags } = meal1;
+  const { mealThumbnail, likeButton, mealText, mealTitle, mealDescription, mealTags } = styles;
+
   return (
     <Card>
     <View>
       <Image
-        style={styles.mealThumbnail}
+        style={mealThumbnail}
         source={{ uri: thumbnailimage }}
       />
     </View>
 
       <CardSection>
         <View>
-          <Text style={styles.likeButton}> ♡ </Text>
+          <Text style={likeButton}> ♡ </Text>
         </View>
-        <View style={styles.mealText}>
-          <Text style={styles.mealTitle}>{title}</Text>
-          <Text style={styles.mealDescription}>{description}</Text>
-          <Text style={styles.mealTags}>{tags}</Text>
+        <View style={mealText}>
+          <Text style={mealTitle}>{title}</Text>
+          <Text style={mealDescription}>{description}</Text>
+          <Text style={mealTags}>{tags}</Text>
         </View>
       </CardSection>
     </Card>
@@ -32,25 +34,28 @@ const styles = {
   mealThumbnail: {
     height: 200
   },
-
   likeButton: {
-    fontSize: 30,
+    fontSize: 27,
     color: '#ff0000',
   },
   mealText: {
     flexDirection: 'column',
     justifyContent: 'space-around',
-    paddingTop: 4
+    paddingTop: 5
   },
   mealTitle: {
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    color: '#383838', // dark grey
+    fontSize: 17,
+    paddingBottom: 2
   },
   mealDescription: {
-    color: '#707070'
+    color: '#707070',
+    paddingBottom: 2
   },
   mealTags: {
-    color: '#fff',
-    backgroundColor: '#707070',
+    color: '#818284',
+    backgroundColor: '#F4F4F4',
     padding: 2
   }
 };
