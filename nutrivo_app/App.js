@@ -9,7 +9,7 @@ export default class App extends Component<Props> {
     return (
       <View>
       <Header screenTitle={'MEALS'} />
-      <MealPlans/>
+      <MealPlans />
       </View>
     );
   }

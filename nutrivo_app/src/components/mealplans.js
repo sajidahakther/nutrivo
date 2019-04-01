@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import axios from 'axios';
+import MealDetail from './mealdetail';
 
 class MealPlans extends Component {
   constructor(props) {
@@ -17,7 +18,9 @@ class MealPlans extends Component {
   }
 
   renderMeals() {
-    return this.state.meals.map(meal => <Text>{meal.title}</Text>);
+    return this.state.meals.map(meal =>
+      <MealDetail key={meal.title} meal1={meal} />
+    );
   }
 
   render() {
@@ -28,12 +31,5 @@ class MealPlans extends Component {
     );
   }
 }
-
-// const styles = {
-//   mealText: {
-//   paddingTop: 80,
-//   color: '#000000'
-//   }
-// };
 
 export default MealPlans;
