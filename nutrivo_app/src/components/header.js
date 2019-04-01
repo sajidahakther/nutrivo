@@ -6,7 +6,9 @@ const Header = (props) => {
 
   return (
     <View style={viewStyle}>
-    <Text style={textStyle}>{props.screenTitle}</Text>
+      <Text style={textStyle}>
+        {props.screenTitle}
+      </Text>
     </View>
   );
 };
@@ -16,20 +18,18 @@ const styles = {
     backgroundColor: '#F8F8F8',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop: 60,
-    shadowColor: '#000',
-    shadowOffset: { width: 0, height: 1 },
-    shadowOpacity: 0.2,
+    paddingTop: 65,
+    borderColor: '#ddd',
+    borderBottomWidth: 1,
     elevation: 2,
     position: 'relative'
   },
   textStyle: {
-    fontSize: 20,
-    fontFamily: 'helvetica',
-    marginBottom: 20,
-    color: '#000000'
+    fontSize: 23,
+    color: '#383838',
+    fontWeight: 'bold',
+    marginBottom: 20
   }
-
 };
 
 export default Header;

@@ -8,7 +8,7 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={{ flex: 1 }}>
-      <Header screenTitle={'MEALS'} />
+      <Header screenTitle={'Meals'} />
       <MealPlans />
       </View>
     );

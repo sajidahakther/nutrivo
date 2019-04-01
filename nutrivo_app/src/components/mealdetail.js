@@ -29,7 +29,7 @@ const MealDetail = ({ meal1 }) => {
       </CardSection>
 
       <CardSection>
-        <Button />
+        <Button whenPressed={() => console.log(title)} />
       </CardSection>
 
     </Card>
