@@ -13,7 +13,7 @@ class MealPlans extends Component {
   }
 
   componentWillMount() {
-    axios.get('https://api.myjson.com/bins/my70y')
+    axios.get('https://api.myjson.com/bins/qj836')
       .then(response => this.setState({ meals: response.data }));
   }
 
