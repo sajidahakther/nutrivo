@@ -4,6 +4,7 @@ import firebase from 'firebase';
 import { Button, Card, CardSection, Input, Spinner } from './common';
 
 class LoginForm extends Component {
+  // adding error and spinner to state to provide user feedback
   state = { email: '', password: '', error: '', loading: false };
 
   // singing user in, authenticate user with firebase
@@ -56,6 +57,8 @@ class LoginForm extends Component {
     );
   }
 
+  // creating controlled components, using state to tell object what it's value should be
+  // using conditional rendering to render different content inside of components like spinner
   render() {
     return (
       <Card>
