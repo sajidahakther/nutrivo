@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { Text } from 'react-native';
 import firebase from 'firebase';
-import { Button, Card, CardSection, Input } from './common';
+import { Button, Card, CardSection, Input, Spinner } from './common';
 
 class LoginForm extends Component {
-  state = { email: '', password: '', error: '' };
+  state = { email: '', password: '', error: '', loading: false };
 
   // singing user in, authenticate user with firebase
   onButtonPress() {
     const { email, password } = this.state;
+    /* re-setting error message to null when user tries to sign in again
+    showing loading sign (spinner) for user feedback when users press 'login'*/
+    this.setState({ error: '', loading: true });
     // using asynchronous methods to return a promise
     firebase.auth().signInWithEmailAndPassword(email, password)
       // if the sign in process fails, create an account
@@ -20,6 +23,19 @@ class LoginForm extends Component {
             this.setState({ error: 'Authentication failed.' });
           });
       });
+  }
+
+  // show spinner when button is pressed and auth process is loading, else show the 'login' button
+  renderButton() {
+    if (this.state.loading) {
+      return <Spinner size="small" />;
+    }
+    // login button is shown by default
+    return (
+      <Button onPress={this.onButtonPress.bind(this)}>
+        Login
+      </Button>
+    );
   }
 
   render() {
@@ -50,9 +66,7 @@ class LoginForm extends Component {
         </Text>
 
         <CardSection>
-          <Button onPress={this.onButtonPress.bind(this)}>
-            Login
-          </Button>
+          {this.renderButton()}
         </CardSection>
 
       </Card>
