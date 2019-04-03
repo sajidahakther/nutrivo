@@ -47,10 +47,11 @@ class LoginForm extends Component {
     if (this.state.loading) {
       return <Spinner size="small" />;
     }
+
     // login button is shown by default
     return (
       <Button onPress={this.onButtonPress.bind(this)}>
-        Login
+        Sign In
       </Button>
     );
   }
@@ -62,7 +63,7 @@ class LoginForm extends Component {
           <Input
             placeholder="user@googlemail.com"
             label="Email"
-            value={this.state.text}
+            value={this.state.email}
             onChangeText={email => this.setState({ email })}
           />
         </CardSection>
@@ -85,7 +86,6 @@ class LoginForm extends Component {
         <CardSection>
           {this.renderButton()}
         </CardSection>
-
       </Card>
     );
   }
