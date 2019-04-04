@@ -3,7 +3,8 @@ import {
   Text,
   TouchableWithoutFeedback,
   View,
-  LayoutAnimation
+  LayoutAnimation,
+  Image
 } from 'react-native';
 import { connect } from 'react-redux';
 import { CardSection } from './common';
@@ -30,8 +31,8 @@ class ListItem extends Component {
   }
 
   render() {
-    const { nutrientName } = styles;
-    const { id, nutrient } = this.props.library;
+    const { nutrientName, nutrientImage } = styles;
+    const { id, nutrient, image } = this.props.library;
 
     return (
       <TouchableWithoutFeedback
@@ -43,7 +44,13 @@ class ListItem extends Component {
               {nutrient}
             </Text>
           </CardSection>
+
+          <Image
+            style={nutrientImage}
+            source={{ uri: image }}
+          />
           {this.renderDescription()}
+
         </View>
       </TouchableWithoutFeedback>
     );
@@ -55,11 +62,16 @@ const styles = {
     fontSize: 18,
     paddingLeft: 15
   },
+  nutrientImage: {
+    height: 200,
+    paddingLeft: 18,
+    paddingRight: 18
+  },
   nutrientDescription: {
     flex: 1,
     textAlign: 'justify',
     paddingLeft: 18,
-    paddingRight: 20
+    paddingRight: 18
   }
 };
 
