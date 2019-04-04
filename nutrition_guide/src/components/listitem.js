@@ -79,6 +79,9 @@ const styles = {
   }
 };
 
+/* whenever application state changes the mapStateToProps function
+will re-run, and pass in a new set of props or component which causes
+the component to render */
 const mapStateToProps = (state, ownProps) => {
   const expanded = state.selectedLibraryId === ownProps.library.id;
 
