@@ -1,0 +1,22 @@
+[
+{"id": 0,
+"nutrient": "Saturated Fat",
+"description": "Eating too much saturated fat can increase your bad (LDL) cholesterol levels, which can increase your risk for heart disease."
+},
+{"id": 1,
+"nutrient": "Trans Fat",
+"description": "Eating foods that have high trans fat, or that contain partially hydrogenated fats (like margarine and shortening), can increase your risk for heart disease."
+},
+{"id": 2,
+"nutrient": "Cholesterol",
+"description": "Cholesterol is a fat-based substance that is important for many bodily functions. However, too much cholesterol in your diet can increase your risk for heart disease."
+},
+{"id": 3,
+"nutrient": "Sodium",
+"description": "Sodium (along with potassium) helps balance fluid levels in the body. However, too much sodium can cause your body to retain too much fluid, leading to increased blood pressure."
+},
+{"id": 4,
+"nutrient": "Sugar",
+"description": "Sugars are found naturally in most foods, but are also refined into what's known as added sugar. Limiting added sugars in your diet is always encouraged."
+}
+]
