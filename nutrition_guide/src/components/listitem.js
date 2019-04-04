@@ -7,7 +7,7 @@ import {
   Image
 } from 'react-native';
 import { connect } from 'react-redux';
-import { CardSection } from './common';
+import { CardSection, SubSection } from './common';
 import * as actions from '../actions';
 
 class ListItem extends Component {
@@ -17,22 +17,31 @@ class ListItem extends Component {
 
   renderDescription() {
     const { library, expanded } = this.props;
-    const { nutrientDescription } = styles;
+    const { image } = this.props.library;
+    const { nutrientDescription, nutrientImage } = styles;
 
     if (expanded) {
       return (
-        <CardSection>
-          <Text style={nutrientDescription}>
-            {library.description}
-          </Text>
-        </CardSection>
+        <View>
+        <SubSection>
+          <Image
+            style={nutrientImage}
+            source={{ uri: image }}
+          />
+          </SubSection>
+          <CardSection>
+            <Text style={nutrientDescription}>
+              {library.description}
+            </Text>
+          </CardSection>
+        </View>
       );
     }
   }
 
   render() {
-    const { nutrientName, nutrientImage } = styles;
-    const { id, nutrient, image } = this.props.library;
+    const { nutrientName } = styles;
+    const { id, nutrient } = this.props.library;
 
     return (
       <TouchableWithoutFeedback
@@ -44,13 +53,7 @@ class ListItem extends Component {
               {nutrient}
             </Text>
           </CardSection>
-
-          <Image
-            style={nutrientImage}
-            source={{ uri: image }}
-          />
           {this.renderDescription()}
-
         </View>
       </TouchableWithoutFeedback>
     );
@@ -63,6 +66,7 @@ const styles = {
     paddingLeft: 15
   },
   nutrientImage: {
+    flex: 1,
     height: 200,
     paddingLeft: 18,
     paddingRight: 18
