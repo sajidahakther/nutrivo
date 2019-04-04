@@ -1,4 +1,4 @@
-// to check if a particular reducer is selected ot not
+// to check if a particular reducer is selected or not
 
 export default (state = null, action) => {
   switch (action.type) {
