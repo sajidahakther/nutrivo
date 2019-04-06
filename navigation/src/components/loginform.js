@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { emailHasChanged, passHasChanged, loginUser } from '../actions';
 import { Card, CardSection, Input, Button } from './common';
@@ -16,6 +17,18 @@ class LoginForm extends Component {
 
   whenPassChanges(text) {
     this.props.passHasChanged(text);
+  }
+
+  renderError() {
+    if (this.props.error) {
+      return (
+        <View style={{ backgroundColor: 'white' }}>
+          <Text style={styles.errorText}>
+            {this.props.error}
+          </Text>
+        </View>
+      );
+    }
   }
 
   render() {
@@ -40,6 +53,8 @@ class LoginForm extends Component {
           />
         </CardSection>
 
+        {this.renderError()}
+
         <CardSection>
           <Button onPress={this.onButtonPress.bind(this)}>
             Sign In
@@ -50,10 +65,19 @@ class LoginForm extends Component {
   }
 }
 
+const styles = {
+  errorText: {
+    fontSize: 20,
+    alignSelf: 'center',
+    color: 'red'
+  }
+};
+
 const mapStateToProps = state => {
   return {
-    email: state.authentication.email,
-    password: state.authentication.password
+    email: state.auth.email,
+    password: state.auth.password,
+    error: state.auth.error
   };
 };
 
