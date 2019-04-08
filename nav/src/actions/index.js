@@ -54,5 +54,5 @@ const loginUserSuccess = (dispatch, user) => {
     payload: user
   });
 
-  Actions.entries();
+  Actions.main();
 };
