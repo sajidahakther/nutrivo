@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Picker } from 'react-native';
+import { Picker, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { entryupdate } from '../actions';
 import { Card, CardSection, Input, Button } from './common';
@@ -8,6 +8,8 @@ class AddEntry extends Component {
   render() {
     return (
       <Card>
+
+        {/* Enter food name */}
         <CardSection>
           <Input
             label="Food"
@@ -17,6 +19,7 @@ class AddEntry extends Component {
           />
         </CardSection>
 
+        {/* Enter serving size */}
         <CardSection>
           <Input
             label="Serving Size"
@@ -26,9 +29,13 @@ class AddEntry extends Component {
           />
         </CardSection>
 
-        <CardSection>
+        {/* Select meal duration */}
+        <CardSection style={{ flexDirection: 'column' }}>
+          <Text style={styles.pickerTitle}>
+            Select a Meal
+          </Text>
           <Picker
-            style={{ flex: 1 }}
+            // style={{ flex: 1 }}
             selectedValue={this.props.duration}
             onValueChange={value => this.props.entryupdate({ prop: 'duration', value })}
           >
@@ -39,6 +46,7 @@ class AddEntry extends Component {
           </Picker>
         </CardSection>
 
+        {/* Press to add food entry */}
         <CardSection>
           <Button>
             Add
@@ -48,6 +56,14 @@ class AddEntry extends Component {
     );
   }
 }
+
+const styles = {
+  pickerTitle: {
+    fontSize: 18,
+    paddingLeft: 20,
+    paddingTop: 9
+  }
+};
 
 const mapStateToProps = (state) => {
   const { food, serving, duration } = state.entry;
