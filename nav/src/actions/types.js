@@ -4,3 +4,4 @@ export const LOGIN_USER_FAIL = 'login_user_fail';
 export const EMAIL_CHANGED = 'email_changed';
 export const PASSWORD_CHANGED = 'password_changed';
 export const ENTRY_UPDATE = 'entry_update';
+export const ADD_ENTRY = 'add_entry';

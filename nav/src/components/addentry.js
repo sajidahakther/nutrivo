@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import { Picker, Text } from 'react-native';
 import { connect } from 'react-redux';
-import { entryupdate } from '../actions';
+import { entryupdate, addentry } from '../actions';
 import { Card, CardSection, Input, Button } from './common';
 
 class AddEntry extends Component {
+
+  onButtonPress() {
+    const { food, serving, duration } = this.props;
+    this.props.addentry({ food, serving, duration: duration || 'Breakfast' });
+  }
+
   render() {
     return (
       <Card>
@@ -35,7 +41,6 @@ class AddEntry extends Component {
             Select a Meal
           </Text>
           <Picker
-            // style={{ flex: 1 }}
             selectedValue={this.props.duration}
             onValueChange={value => this.props.entryupdate({ prop: 'duration', value })}
           >
@@ -48,7 +53,7 @@ class AddEntry extends Component {
 
         {/* Press to add food entry */}
         <CardSection>
-          <Button>
+          <Button onPress={this.onButtonPress.bind(this)}>
             Add
           </Button>
         </CardSection>
@@ -70,4 +75,6 @@ const mapStateToProps = (state) => {
   return { food, serving, duration };
 };
 
-export default connect(mapStateToProps, { entryupdate })(AddEntry);
+export default connect(mapStateToProps, {
+  entryupdate, addentry
+})(AddEntry);
