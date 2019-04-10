@@ -2,7 +2,8 @@ import firebase from 'firebase';
 import { Actions } from 'react-native-router-flux';
 import {
   ENTRY_UPDATE,
-  ADD_ENTRY
+  ADD_ENTRY,
+  ENTRIES_FETCH_SUCCESS
 } from './types';
 
 export const entryupdate = ({ prop, value }) => {
@@ -23,5 +24,18 @@ export const addentry = ({ food, serving, duration }) => {
       dispatch({ type: ADD_ENTRY });
       Actions.entries({ type: 'reset' });
     });
+  };
+};
+
+export const entriesFetch = () => {
+  const { currentUser } = firebase.auth();
+
+  /* any time I get any data, calling the snapshot function
+  with an object to describe the data that's sitting in there */
+  return (dispatch) => {
+    firebase.database().ref(`/users/${currentUser.uid}/meals`)
+      .on('value', snapshot => {
+        dispatch({ type: ENTRIES_FETCH_SUCCESS, payload: snapshot.val() });
+      });
   };
 };

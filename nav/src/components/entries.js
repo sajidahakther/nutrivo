@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import { View, Text } from 'react-native';
+import { entriesFetch } from '../actions';
 
 class Entries extends Component {
+componentWillMount() {
+  this.props.entriesFetch();
+}
+
   render() {
     return (
       <View>
@@ -16,4 +22,4 @@ class Entries extends Component {
   }
 }
 
-export default Entries;
+export default connect(null, { entriesFetch })(Entries);
