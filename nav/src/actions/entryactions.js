@@ -3,7 +3,8 @@ import { Actions } from 'react-native-router-flux';
 import {
   ENTRY_UPDATE,
   ADD_ENTRY,
-  ENTRIES_FETCH_SUCCESS
+  ENTRIES_FETCH_SUCCESS,
+  ENTRY_SAVE_SUCCESS
 } from './types';
 
 export const entryupdate = ({ prop, value }) => {
@@ -46,9 +47,12 @@ export const entriesFetch = () => {
 user wants to make changes to a specific existing record */
 export const entrysave = ({ food, serving, duration, uid }) => {
   const { currentUser } = firebase.auth();
-  return () => {
+  return (dispatch) => {
     firebase.database().ref(`/users/${currentUser.uid}/meals/${uid}`)
       .set({ food, serving, duration })
-        .then(() => console.log('saved!'));
+      .then(() => {
+        dispatch({ type: ENTRY_SAVE_SUCCESS });
+        Actions.entries({ type: 'reset' });
+      });
   };
 };

@@ -6,3 +6,4 @@ export const PASSWORD_CHANGED = 'password_changed';
 export const ENTRY_UPDATE = 'entry_update';
 export const ADD_ENTRY = 'add_entry';
 export const ENTRIES_FETCH_SUCCESS = 'entries_fetch_success';
+export const ENTRY_SAVE_SUCCESS = 'entry_save_success';
