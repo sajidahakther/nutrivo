@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import EntryForm from './entryform';
-import { entryupdate } from '../actions';
+import { entryupdate, entrysave } from '../actions';
 import { Card, CardSection, Button } from './common';
 
 class EditEntry extends Component {
@@ -18,13 +18,13 @@ class EditEntry extends Component {
 
   onButtonPress() {
     const { food, serving, duration } = this.props;
-    console.log(food, serving, duration);
+    this.props.entrysave({ food, serving, duration, uid: this.props.entry.uid });
   }
 
   render() {
     return (
       <Card>
-      
+
         <EntryForm />
 
         <CardSection>
@@ -43,4 +43,4 @@ const mapStateToProps = (state) => {
   return { food, serving, duration };
 };
 
-export default connect(mapStateToProps, { entryupdate })(EditEntry);
+export default connect(mapStateToProps, { entryupdate, entrysave })(EditEntry);
