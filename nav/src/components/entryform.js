@@ -2,13 +2,45 @@ import React, { Component } from 'react';
 import { View, Text, Picker } from 'react-native';
 import { connect } from 'react-redux';
 import { entryupdate } from '../actions';
-import { CardSection, Input } from './common';
+import { CardSection, Input, Button } from './common';
 
 
 class EntryForm extends Component {
+
+  onCameraButtonPress() {
+    console.log('launch camera!');
+  }
+
   render() {
     return (
       <View>
+
+      {/* Select meal duration */}
+      <CardSection style={{ flexDirection: 'column' }}>
+        <Text style={styles.pickerTitle}>
+          Select a Meal
+        </Text>
+
+        <Picker
+          selectedValue={this.props.duration}
+          onValueChange={value => this.props.entryupdate({ prop: 'duration', value })}
+        >
+          <Picker.Item label="Breakfast" value="Breakfast" />
+          <Picker.Item label="Lunch" value="Lunch" />
+          <Picker.Item label="Snack" value="Snack" />
+          <Picker.Item label="Dinner" value="Dinner" />
+        </Picker>
+      </CardSection>
+
+      <CardSection>
+        <Button onPress={this.onCameraButtonPress.bind(this)}>
+          Scan Food Label
+        </Button>
+      </CardSection>
+
+      <CardSection>
+      <Text> OR </Text>
+      </CardSection>
 
       {/* Enter food name */}
       <CardSection>
@@ -30,21 +62,6 @@ class EntryForm extends Component {
         />
       </CardSection>
 
-      {/* Select meal duration */}
-      <CardSection style={{ flexDirection: 'column' }}>
-        <Text style={styles.pickerTitle}>
-          Select a Meal
-        </Text>
-        <Picker
-          selectedValue={this.props.duration}
-          onValueChange={value => this.props.entryupdate({ prop: 'duration', value })}
-        >
-          <Picker.Item label="Breakfast" value="Breakfast" />
-          <Picker.Item label="Lunch" value="Lunch" />
-          <Picker.Item label="Snack" value="Snack" />
-          <Picker.Item label="Dinner" value="Dinner" />
-        </Picker>
-      </CardSection>
       </View>
     );
   }
