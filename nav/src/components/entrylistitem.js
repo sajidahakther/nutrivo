@@ -5,19 +5,31 @@ import { CardSection } from './common';
 
 class EntryListItem extends Component {
   onRowPress() {
-    Actions.addentry({ entry: this.props.entry });
+    Actions.editentry({ entry: this.props.entry });
   }
 
   render() {
-    const { food } = this.props.entry;
+    const { food, serving } = this.props.entry;
 
     return (
       <TouchableWithoutFeedback onPress={this.onRowPress.bind(this)}>
         <View>
           <CardSection>
-            <Text style={styles.titleSyle}>
-             {food}
-            </Text>
+            <View style={{ flex: 1, flexDirection: 'row' }}>
+
+              <View style={{ flex: 1 }}>
+                <Text style={styles.food}>
+                 {food}
+                </Text>
+              </View>
+
+              <View style={{ flex: 1 }}>
+                <Text style={styles.serving}>
+                 {serving}
+                </Text>
+              </View>
+
+            </View>
           </CardSection>
         </View>
       </TouchableWithoutFeedback>
@@ -26,9 +38,16 @@ class EntryListItem extends Component {
 }
 
 const styles = {
-  titleStyle: {
-    fontSize: 18,
-    paddingLeft: 15
+  food: {
+    paddingLeft: 15,
+    color: '#3399ff',
+    fontSize: 18
+  },
+  serving: {
+    textAlign: 'right',
+    paddingRight: 15,
+    color: '#585858',
+    fontSize: 18
   }
 };
 
