@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, Modal } from 'react-native';
 import { CardSection } from './cardsection';
 import { Button } from './button';
+import { Card } from './card';
 
 const Confirm = ({ children, visible, onAccept, onDecline }) => {
   const { container, text, cardsect } = styles;
@@ -14,16 +15,20 @@ const Confirm = ({ children, visible, onAccept, onDecline }) => {
       onRequestClose={() => {}}
     >
       <View style={container}>
-        <CardSection style={cardsect}>
-          <Text style={text}>
-            {children}
-          </Text>
-        </CardSection>
+        <Card>
 
-        <CardSection>
-          <Button onPress={onAccept}>Yes</Button>
-          <Button onPress={onDecline}>No</Button>
-        </CardSection>
+          <CardSection style={cardsect}>
+            <Text style={text}>
+              {children}
+            </Text>
+          </CardSection>
+
+          <CardSection>
+            <Button onPress={onAccept}>Yes</Button>
+            <Button onPress={onDecline}>No</Button>
+          </CardSection>
+
+        </Card>
       </View>
     </Modal>
   );

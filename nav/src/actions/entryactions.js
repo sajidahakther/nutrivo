@@ -56,3 +56,15 @@ export const entrysave = ({ food, serving, duration, uid }) => {
       });
   };
 };
+
+export const entrydelete = ({ uid }) => {
+  const { currentUser } = firebase.auth();
+
+  return () => {
+    firebase.database().ref(`/users/${currentUser.uid}/meals/${uid}`)
+      .remove()
+      .then(() => {
+        Actions.entries({ type: 'reset' });
+      });
+  };
+};

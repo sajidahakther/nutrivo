@@ -2,7 +2,7 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import EntryForm from './entryform';
-import { entryupdate, entrysave } from '../actions';
+import { entryupdate, entrysave, entrydelete } from '../actions';
 import { Card, CardSection, Button, Confirm } from './common';
 
 class EditEntry extends Component {
@@ -21,6 +21,15 @@ class EditEntry extends Component {
   onButtonPress() {
     const { food, serving, duration } = this.props;
     this.props.entrysave({ food, serving, duration, uid: this.props.entry.uid });
+  }
+
+  onAccept() {
+    const { uid } = this.props.entry;
+    this.props.entrydelete({ uid });
+  }
+
+  onDecline() {
+    this.setState({ showModal: false });
   }
 
   render() {
@@ -43,6 +52,8 @@ class EditEntry extends Component {
 
         <Confirm
           visible={this.state.showModal}
+          onAccept={this.onAccept.bind(this)}
+          onDecline={this.onDecline.bind(this)}
         >
           Are you sure you want to delete this entry?
         </Confirm>
@@ -56,4 +67,6 @@ const mapStateToProps = (state) => {
   return { food, serving, duration };
 };
 
-export default connect(mapStateToProps, { entryupdate, entrysave })(EditEntry);
+export default connect(mapStateToProps, {
+  entryupdate, entrysave, entrydelete
+})(EditEntry);
