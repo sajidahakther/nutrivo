@@ -1,8 +1,9 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { ListView, View, Text } from 'react-native';
+import { ListView } from 'react-native';
 import { entriesFetch } from '../actions';
+import EntryListItem from './entrylistitem';
 
 class Entries extends Component {
   componentWillMount() {
@@ -23,17 +24,18 @@ class Entries extends Component {
     this.dataSource = ds.cloneWithRows(entries);
   }
 
+  renderRow(entry) {
+    return <EntryListItem entry={entry} />;
+  }
+
   render() {
     console.log(this.props);
     return (
-      <View>
-        <Text>apple</Text>
-        <Text>water</Text>
-        <Text>sandwich</Text>
-        <Text>banana</Text>
-        <Text>coffee</Text>
-        <Text>cake</Text>
-      </View>
+      <ListView
+        enableEmptySections
+        dataSource={this.dataSource}
+        renderRow={this.renderRow} // renders all the entry items in a row
+      />
     );
   }
 }
