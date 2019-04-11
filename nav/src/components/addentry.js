@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Picker, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { entryupdate, addentry } from '../actions';
-import { Card, CardSection, Input, Button } from './common';
+import { Card, CardSection, Button } from './common';
+import EntryForm from './entryform';
 
 class AddEntry extends Component {
 
@@ -15,42 +15,8 @@ class AddEntry extends Component {
     console.log(this.props.entry);
     return (
       <Card>
-
-        {/* Enter food name */}
-        <CardSection>
-          <Input
-            label="Food"
-            placeholder="Rice"
-            value={this.props.food}
-            onChangeText={value => this.props.entryupdate({ prop: 'food', value })}
-          />
-        </CardSection>
-
-        {/* Enter serving size */}
-        <CardSection>
-          <Input
-            label="Serving Size"
-            placeholder="100 g"
-            value={this.props.serving}
-            onChangeText={value => this.props.entryupdate({ prop: 'serving', value })}
-          />
-        </CardSection>
-
-        {/* Select meal duration */}
-        <CardSection style={{ flexDirection: 'column' }}>
-          <Text style={styles.pickerTitle}>
-            Select a Meal
-          </Text>
-          <Picker
-            selectedValue={this.props.duration}
-            onValueChange={value => this.props.entryupdate({ prop: 'duration', value })}
-          >
-            <Picker.Item label="Breakfast" value="Breakfast" />
-            <Picker.Item label="Lunch" value="Lunch" />
-            <Picker.Item label="Snack" value="Snack" />
-            <Picker.Item label="Dinner" value="Dinner" />
-          </Picker>
-        </CardSection>
+        {/* Form to add meal */}
+        <EntryForm {...this.props} />
 
         {/* Press to add food entry */}
         <CardSection>
@@ -62,14 +28,6 @@ class AddEntry extends Component {
     );
   }
 }
-
-const styles = {
-  pickerTitle: {
-    fontSize: 18,
-    paddingLeft: 20,
-    paddingTop: 9
-  }
-};
 
 const mapStateToProps = (state) => {
   const { food, serving, duration } = state.entry;
