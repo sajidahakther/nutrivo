@@ -20,8 +20,9 @@ const RouterComponent = () => {
         </Scene>
 
         <Scene key="main">
+
+          {/* button - callback function to add an entry */}
           <Scene
-            // callback function to 'Add Entry'
             onRight={() => Actions.addentry()}
             rightTitle="Add"
             key="entries"
@@ -30,12 +31,14 @@ const RouterComponent = () => {
             initial
           />
 
+          {/* form to add the meal */}
           <Scene
             key="addentry"
             component={AddEntry}
             title="Add Food"
           />
 
+          {/* form to edit the entry */}
           <Scene
             key="editentry"
             component={EditEntry}
