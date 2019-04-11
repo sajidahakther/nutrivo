@@ -3,9 +3,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import EntryForm from './entryform';
 import { entryupdate, entrysave } from '../actions';
-import { Card, CardSection, Button } from './common';
+import { Card, CardSection, Button, Confirm } from './common';
 
 class EditEntry extends Component {
+
+  state = { showModal: false };
 
   /* iterating over every property on that object and updating the reducer with
   every property - taking all the attributes of the meal entry and putting them
@@ -33,6 +35,17 @@ class EditEntry extends Component {
           </Button>
         </CardSection>
 
+        <CardSection>
+          <Button onPress={() => this.setState({ showModal: !this.state.showModal })}>
+            Delete
+          </Button>
+        </CardSection>
+
+        <Confirm
+          visible={this.state.showModal}
+        >
+          Are you sure you want to delete this entry?
+        </Confirm>
       </Card>
     );
   }
