@@ -12,6 +12,7 @@ class AddEntry extends Component {
   }
 
   render() {
+    console.log(this.props.entry);
     return (
       <Card>
 

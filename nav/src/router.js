@@ -23,7 +23,6 @@ const RouterComponent = () => {
             // callback function to 'Add Entry'
             onRight={() => Actions.addentry()}
             rightTitle="Add"
-
             key="entries"
             component={Entries}
             title="Entries"

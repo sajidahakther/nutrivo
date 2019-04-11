@@ -30,8 +30,10 @@ export const addentry = ({ food, serving, duration }) => {
 export const entriesFetch = () => {
   const { currentUser } = firebase.auth();
 
-  /* any time I get any data, calling the snapshot function
-  with an object to describe the data that's sitting in there */
+  /* firebase is a live dynamic data source so every time i get any data
+  (the user entering a meal) it automatically gets appended onto the list.
+  it calls the snapshot function with an object to describe the data that's 
+  sitting in there */
   return (dispatch) => {
     firebase.database().ref(`/users/${currentUser.uid}/meals`)
       .on('value', snapshot => {
