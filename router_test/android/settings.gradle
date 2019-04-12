@@ -1,0 +1,3 @@
+rootProject.name = 'router_test'
+
+include ':app'
