@@ -1,5 +1,5 @@
 import React, { } from 'react';
-import { View, Text } from 'react-native';
+import { View } from 'react-native';
 import { Router, Scene } from 'react-native-router-flux';
 import Icon from 'react-native-vector-icons/FontAwesome';
 
@@ -11,10 +11,15 @@ import EntriesScreen from './entriesscreen';
 import GuideScreen from './guidescreen';
 import ProfileScreen from './profilescreen';
 
-const TabIcon = ({ iconName }) => {
+const TabIcon = ({ focused, iconName }) => {
   return (
     <View>
-    <Icon style={{ color: 'black', fontSize: 18, textAlign: 'center' }} name={iconName} />
+    <Icon
+      style={{ color: focused ? 'red' : 'black',
+      fontSize: 18,
+      textAlign: 'center' }}
+      name={iconName}
+    />
     {/*<Text style={{ color: selected ? 'red' : 'black' }}> {title} </Text>*/}
     </View>
   );
@@ -37,6 +42,7 @@ const App = () => {
         <Scene
           key="tabbar"
           tabs
+          activeTintColor='red'
           tabBarStyle={{ backgroundColor: '#FFFFFF' }}
         >
           {/* NUTRITION GUIDE SCREEN */}
@@ -45,6 +51,7 @@ const App = () => {
             title="Guide"
             iconName="leanpub"
             icon={TabIcon}
+            color='#000000'
           >
             <Scene
               key="guidescreen"
