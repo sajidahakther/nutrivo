@@ -1,6 +1,5 @@
-import React, { Component } from 'react';
+import React, { } from 'react';
 import {
-  StyleSheet,
   Text,
   View
 } from 'react-native';
@@ -11,13 +10,13 @@ const OverviewScreen = () => {
     <View style={styles.container}>
       <Text
         style={styles.welcome}
-        // onPress={() => Actions.overviewscreen()}
+        onPress={() => Actions.entriesscreen()}
       >
-       add activity here
+       button
       </Text>
     </View>
   );
-}
+};
 
 const styles = {
   container: {

@@ -5,14 +5,14 @@ import {
 } from 'react-native';
 import { Actions } from 'react-native-router-flux';
 
-const ProfileScreen = () => {
+const Calories = () => {
   return (
     <View style={styles.container}>
       <Text
         style={styles.welcome}
-        onPress={() => Actions.overviewscreen()}
+        // onPress={() => Actions.overviewscreen()}
       >
-       add profile information, settings, allergens details
+       calories!!
       </Text>
     </View>
   );
@@ -33,4 +33,4 @@ const styles = {
   }
 };
 
-export default ProfileScreen;
+export default Calories;
