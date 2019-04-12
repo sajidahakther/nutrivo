@@ -1,20 +1,22 @@
 import React, { } from 'react';
+import { View, Text } from 'react-native';
 import { Router, Scene } from 'react-native-router-flux';
-import { Text } from 'react-native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
 //Routes
 import LoginScreen from './loginscreen';
 import OverviewScreen from './overviewscreen';
 import SearchScreen from './searchscreen';
 import EntriesScreen from './entriesscreen';
+import GuideScreen from './guidescreen';
+import ProfileScreen from './profilescreen';
 
-// import CaloriesModal from './modals/calories';
-// import GuideScreen from './guidescreen';
-// import ProfileScreen from './profilescreen';
-
-const TabIcon = ({ selected, title }) => {
+const TabIcon = ({ iconName }) => {
   return (
-    <Text style={{ color: selected ? 'red' : 'black' }}>{ title }</Text>
+    <View>
+    <Icon style={{ color: 'black', fontSize: 18, textAlign: 'center' }} name={iconName} />
+    {/*<Text style={{ color: selected ? 'red' : 'black' }}> {title} </Text>*/}
+    </View>
   );
 };
 
@@ -22,24 +24,74 @@ const App = () => {
   return (
     <Router>
       <Scene key="root" hideNavBar>
+
+      {/* LOGIN SCREEN */}
       <Scene
         key="loginscreen"
         component={LoginScreen}
         title="Login"
         initial
       />
+
+        {/* BOTTOM NAVIGATION */}
         <Scene
           key="tabbar"
           tabs
           tabBarStyle={{ backgroundColor: '#FFFFFF' }}
         >
+          {/* NUTRITION GUIDE SCREEN */}
+          <Scene
+            key="guide"
+            title="Guide"
+            iconName="leanpub"
+            icon={TabIcon}
+          >
+            <Scene
+              key="guidescreen"
+              component={GuideScreen}
+              title="Nutrition Guide"
+            />
+          </Scene>
+
+          {/* SEARCH SCREEN */}
+          <Scene
+            key="search"
+            title="Search"
+            iconName="search"
+            icon={TabIcon}
+          >
+            <Scene
+              key="searchscreen"
+              component={SearchScreen}
+              title="Search"
+            />
+          </Scene>
+
+          {/* ENTRIES SCREEN */}
+          <Scene
+            key="entries"
+            title="Entries"
+            iconName="plus"
+            icon={TabIcon}
+          >
+            <Scene
+              key="entriesscreen"
+              component={EntriesScreen}
+              title="Entries"
+            />
+          </Scene>
+
           {/* OVERVIEW SCREEN */}
-          <Scene key="overview" title="Overview" icon={TabIcon}>
+          <Scene
+            key="overview"
+            title="Overview"
+            iconName="bar-chart"
+            icon={TabIcon}
+          >
             <Scene
               key="overviewscreen"
               component={OverviewScreen}
               title="Overview"
-              initial
             />
             {/* caloric intake modal */}
             <Scene
@@ -51,21 +103,17 @@ const App = () => {
             {/* nutritional intake */}
           </Scene>
 
-          {/* SEARCH SCREEN */}
-          <Scene key="search" title="Search" icon={TabIcon}>
+          {/* PROFILE SCREEN */}
+          <Scene
+            key="profile"
+            title="Profile"
+            iconName="user-circle-o"
+            icon={TabIcon}
+          >
             <Scene
-              key="searchscreen"
-              component={SearchScreen}
-              title="Search"
-            />
-          </Scene>
-
-          {/* ENTRIES SCREEN */}
-          <Scene key="entries" title="Entries" icon={TabIcon}>
-            <Scene
-              key="entriesscreen"
-              component={EntriesScreen}
-              title="Entries"
+              key="profilescreen"
+              component={ProfileScreen}
+              title="Profile"
             />
           </Scene>
 
