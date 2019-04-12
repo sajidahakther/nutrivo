@@ -10,9 +10,23 @@ const OverviewScreen = () => {
     <View style={styles.container}>
       <Text
         style={styles.welcome}
-        onPress={() => Actions.entriesscreen()}
+        onPress={() => Actions.caloriesmodal()}
       >
-       button
+       Total Calories
+      </Text>
+
+      <Text
+        style={styles.welcome}
+        onPress={() => Actions.macrosmodal()}
+      >
+       Macronutrients
+      </Text>
+
+      <Text
+        style={styles.welcome}
+        onPress={() => Actions.nutrientsmodal()}
+      >
+       Target Nutrient Intake
       </Text>
     </View>
   );

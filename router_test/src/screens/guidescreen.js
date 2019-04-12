@@ -14,6 +14,13 @@ const GuideScreen = () => {
       >
        add the buttons for the nutrition guide
       </Text>
+
+      <Text
+        style={styles.welcome}
+        onPress={() => Actions.modal()}
+      >
+       Macronutrients
+      </Text>
     </View>
   );
 };
