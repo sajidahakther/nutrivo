@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { entryupdate, addentry } from '../actions';
-import { Card, CardSection, Button } from './common';
+import { entryupdate, addentry } from '../../../actions';
+import { Card, CardSection, Button } from '../../common';
 import EntryForm from './entryform';
 
 class AddEntry extends Component {

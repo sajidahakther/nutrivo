@@ -2,10 +2,10 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ListView } from 'react-native';
-import { entriesFetch } from '../actions';
-import EntryListItem from './entrylistitem';
+import { entriesFetch } from '../../actions';
+import EntryListItem from './entries/entrylistitem';
 
-class Entries extends Component {
+class EntriesScreen extends Component {
   componentWillMount() {
     this.props.entriesFetch(); // loads up list of entries
     this.createDataSource(this.props);
@@ -50,4 +50,4 @@ const mapStateToProps = state => {
   return { entries };
 };
 
-export default connect(mapStateToProps, { entriesFetch })(Entries);
+export default connect(mapStateToProps, { entriesFetch })(EntriesScreen);

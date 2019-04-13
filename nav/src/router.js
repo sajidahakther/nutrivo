@@ -6,17 +6,16 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 // Main
 import LoginForm from './components/loginform';
 
-
 //Navbar Screens
 import GuideScreen from './components/screens/guidescreen';
 import SearchScreen from './components/screens/searchscreen';
-import Entries from './components/entries';
+import EntriesScreen from './components/screens/entriesscreen';
 import OverviewScreen from './components/screens/overviewscreen';
 import ProfileScreen from './components/screens/profilescreen';
 
 //Entries
-import AddEntry from './components/addentry';
-import EditEntry from './components/editentry';
+import AddEntry from './components/screens/entries/addentry';
+import EditEntry from './components/screens/entries/editentry';
 
 const TabIcon = ({ focused, iconName }) => {
   return (
@@ -84,14 +83,14 @@ const RouterComponent = () => {
 
             {/* ENTRIES SCREEN */}
             <Scene
-              key="ent"
+              key="entrytab"
               title="Entries"
               iconName="plus"
               icon={TabIcon}
             >
               <Scene
                 key="entries"
-                component={Entries}
+                component={EntriesScreen}
                 title="Entries"
                 onRight={() => Actions.addentry()}
                 rightTitle="Add"

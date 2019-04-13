@@ -2,8 +2,8 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import EntryForm from './entryform';
-import { entryupdate, entrysave, entrydelete } from '../actions';
-import { Card, CardSection, Button, Confirm } from './common';
+import { entryupdate, entrysave, entrydelete } from '../../../actions';
+import { Card, CardSection, Button, Confirm } from '../../common';
 
 class EditEntry extends Component {
 
