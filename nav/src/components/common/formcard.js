@@ -1,7 +1,7 @@
 import React from 'react';
 import { View } from 'react-native';
 
-const SubSection = (props) => {
+const FormCard = (props) => {
   return (
     <View style={styles.containerStyle}>
       {props.children}
@@ -11,12 +11,10 @@ const SubSection = (props) => {
 
 const styles = {
   containerStyle: {
-    padding: 5,
-    // backgroundColor: '#fff',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
-    position: 'relative'
+    
+    marginLeft: 20,
+    marginRight: 20,
   }
 };
 
-export { SubSection };
+export { FormCard };

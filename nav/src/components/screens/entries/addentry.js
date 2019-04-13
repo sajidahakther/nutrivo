@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { entryupdate, addentry } from '../../../actions';
-import { Card, CardSection, Button } from '../../common';
+import { FormCard, SubSection, Button } from '../../common';
 import EntryForm from './entryform';
 
 class AddEntry extends Component {
@@ -14,20 +14,26 @@ class AddEntry extends Component {
   render() {
     console.log(this.props.entry);
     return (
-      <Card>
+      <FormCard>
         {/* Form to add meal */}
         <EntryForm {...this.props} />
 
         {/* Press to add food entry */}
-        <CardSection>
+        <SubSection style={styles.buttonSpacing}>
           <Button onPress={this.onButtonPress.bind(this)}>
             Add
           </Button>
-        </CardSection>
-      </Card>
+        </SubSection>
+      </FormCard>
     );
   }
 }
+
+const styles = {
+  buttonSpacing: {
+    paddingTop: 10
+  }
+};
 
 const mapStateToProps = (state) => {
   const { food, serving, duration } = state.entry;

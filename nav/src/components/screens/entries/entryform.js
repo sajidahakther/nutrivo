@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, Picker } from 'react-native';
 import { connect } from 'react-redux';
 import { entryupdate } from '../../../actions';
-import { CardSection, Input, Button } from '../../common';
+import { CardSection, Input, Button, SubSection } from '../../common';
 
 
 class EntryForm extends Component {
@@ -13,7 +13,7 @@ class EntryForm extends Component {
 
   render() {
     return (
-      <View>
+      <View style={styles.container}>
 
       {/* Select meal duration */}
       <CardSection style={{ flexDirection: 'column' }}>
@@ -32,21 +32,19 @@ class EntryForm extends Component {
         </Picker>
       </CardSection>
 
-      <CardSection>
-        <Button onPress={this.onCameraButtonPress.bind(this)}>
-          Scan Food Label
-        </Button>
+        <SubSection>
+          <Button onPress={this.onCameraButtonPress.bind(this)}>
+            Scan Food Label
+          </Button>
+        </SubSection>
+
+        <CardSection style={styles.manualSection}>
+      <Text style={styles.manualEntry}> Manually Enter Food </Text>
       </CardSection>
 
-      <CardSection>
-      <Text> OR </Text>
-      </CardSection>
-
-      {/* Enter food name */}
       <CardSection>
         <Input
-          label="Food"
-          placeholder="Rice"
+          placeholder="Food (Vegetable pasta)"
           value={this.props.food}
           onChangeText={value => this.props.entryupdate({ prop: 'food', value })}
         />
@@ -55,8 +53,7 @@ class EntryForm extends Component {
       {/* Enter serving size */}
       <CardSection>
         <Input
-          label="Serving Size"
-          placeholder="100 g"
+          placeholder="Serving size (230 g)"
           value={this.props.serving}
           onChangeText={value => this.props.entryupdate({ prop: 'serving', value })}
         />
@@ -70,8 +67,32 @@ class EntryForm extends Component {
 const styles = {
   pickerTitle: {
     fontSize: 18,
-    paddingLeft: 20,
-    paddingTop: 9
+    fontWeight: 'bold',
+    color: '#303030',
+    alignSelf: 'center',
+    paddingTop: 9,
+    letterSpacing: 1
+  },
+  pickerText: {
+    fontSize: 16,
+    color: '#303030'
+  },
+  manualEntry: {
+    alignSelf: 'center',
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: '#303030',
+    letterSpacing: 1,
+    paddingTop: 50,
+    paddingBottom: 15,
+    paddingLeft: 80
+
+  },
+  manualSection: {
+    textAlign: 'center',
+  },
+  container: {
+    paddingTop: 20,
   }
 };
 

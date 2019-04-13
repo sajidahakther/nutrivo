@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { View, Text, ImageBackground } from 'react-native';
 import { connect } from 'react-redux';
 import { emailChanged, passwordChanged, loginUser } from '../actions';
-import { Card, CardSection, Input, Button, Spinner } from './common';
+import { SubSection, Input, Button, Spinner, FormSection, FormCard } from './common';
 
 // backgroung image is free to use and originally from unsplash: https://unsplash.com/photos/nTZOILVZuOg, edited by me.
 const nutrivobg = require('./assets/mainbg.png');
@@ -30,7 +30,7 @@ class LoginForm extends Component {
     }
     return (
       <Button onPress={this.onButtonPress.bind(this)}>
-      Sign In
+      LOGIN
       </Button>
     );
   }
@@ -54,34 +54,34 @@ class LoginForm extends Component {
         style={{ width: '100%', height: '100%' }}
       >
       <View
-        style={{ paddingTop: 620 }}
+        style={{ paddingTop: 660 }}
       >
-        <Card>
-          <CardSection>
+        <FormCard>
+          <FormSection>
             <Input
-              label="Email"
-              placeholder="user@nutrivo.com"
+              // label="Email"
+              placeholder="Email"
               onChangeText={this.onEmailChange.bind(this)}
               value={this.props.email}
             />
-          </CardSection>
+          </FormSection>
 
-          <CardSection>
+          <FormSection>
           <Input
             secureTextEntry
-            label="Password"
-            placeholder="password"
+            // label="Password"
+            placeholder="Password"
             onChangeText={this.onPasswordChange.bind(this)}
             value={this.props.password}
           />
-          </CardSection>
+          </FormSection>
+          </FormCard>
 
           {this.renderError()}
 
-          <CardSection>
+          <SubSection>
             {this.renderButton()}
-          </CardSection>
-        </Card>
+          </SubSection>
         </View>
       </ImageBackground>
     );
@@ -90,14 +90,13 @@ class LoginForm extends Component {
 
 const styles = {
   errorView: {
-    backgroundColor: 'rgba(255,255,255, 0.3)',
     paddingTop: 10,
-    paddingBottom: 10
+    paddingBottom: 5
   },
   errorText: {
     fontSize: 20,
     alignSelf: 'center',
-    color: '#FF0000'
+    color: '#FA2133'
   }
 };
 

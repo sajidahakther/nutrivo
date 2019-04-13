@@ -19,10 +19,11 @@ Built with React Native, Redux, Firebase.
 - As the project hasn't been deployed yet, it will currently require [Xcode](https://developer.apple.com/xcode/) to view the application on a simulator.
 - Download [zip file](https://gitlab.doc.gold.ac.uk/sakth050/nutrivo/-/archive/master/nutrivo-master.zip) or clone the repository to your local computer using the command line `git clone https://gitlab.doc.gold.ac.uk/sakth050/nutrivo.git`
 - Install dependencies: `npm install`
-- Install the following npm packages - redux (thunk), firebase library, lodash, icons:
+- Install the following npm packages - redux (thunk), firebase library, lodash, axios, icons:
 `npm i --save react-redux redux`
 `npm i --save redux-thunk`
 `npm i --save firebase`
+`npm i --save axios`
 `npm i --save lodash`
 `npm install react-native-vector-icons` 
 - Execute react-native link: `react-native link react-native-vector-icons`

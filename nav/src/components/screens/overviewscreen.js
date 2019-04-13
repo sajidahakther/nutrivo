@@ -37,7 +37,7 @@ const styles = {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#ededed',
+    backgroundColor: '#F8F8F8',
   },
   welcome: {
     fontSize: 20,

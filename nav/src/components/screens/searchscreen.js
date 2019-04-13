@@ -1,36 +1,22 @@
-import React, { } from 'react';
+import React, { Component } from 'react';
 import {
-  Text,
-  View
+  ScrollView,
+  View,
+  Text
 } from 'react-native';
-import { Actions } from 'react-native-router-flux';
+// import axios from 'axios';
+// import MealDetail from './search/mealdetail';
 
-const SearchScreen = () => {
+class SearchScreen extends Component {
+render() {
   return (
-    <View style={styles.container}>
-      <Text
-        style={styles.welcome}
-        onPress={() => Actions.overviewscreen()}
-      >
-       put the search functionality here with the nutrivo_app data from json file
-      </Text>
+    <ScrollView>
+    <View>
+    <Text> Hi</Text>
     </View>
+    </ScrollView>
   );
-};
-
-const styles = {
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#ededed',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-    color: '#000000',
-  }
-};
+}
+}
 
 export default SearchScreen;

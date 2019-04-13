@@ -136,6 +136,8 @@ const RouterComponent = () => {
                   key="profilescreen"
                   component={ProfileScreen}
                   title="Profile"
+                  onRight={() => Actions.auth()}
+                  rightTitle="Sign Out"
                 />
               </Scene>
             </Scene>

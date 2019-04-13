@@ -40,7 +40,7 @@ class EntryListItem extends Component {
 const styles = {
   food: {
     paddingLeft: 15,
-    color: '#3399ff',
+    color: '#FA2133',
     fontSize: 18
   },
   serving: {
