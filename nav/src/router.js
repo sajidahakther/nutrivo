@@ -21,7 +21,7 @@ const TabIcon = ({ focused, iconName }) => {
   return (
     <View>
     <Icon
-      style={{ color: focused ? '#96c1da' : '#909090',
+      style={{ color: focused ? '#FA2133' : '#909090',
       fontSize: 18,
       textAlign: 'center' }}
       name={iconName}
@@ -40,6 +40,7 @@ const RouterComponent = () => {
             key="login"
             component={LoginForm}
             title="Login"
+            hideNavBar
             initial
           />
         </Scene>

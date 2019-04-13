@@ -26,7 +26,7 @@ const styles = {
   },
   textStyle: {
     fontSize: 23,
-    color: '#383838',
+    color: '#303030',
     fontWeight: 'bold',
     marginBottom: 20
   }
