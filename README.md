@@ -29,5 +29,11 @@ Built with React Native, Redux, Firebase.
 - Execute react-native link: `react-native link react-native-vector-icons`
 - Open the **ios** folder from the root of the project, and open **.xcodeproj** file on Xcode, then select **AppDelegate.m** file and run the iOS app.
 - Alternatively, build and run the iOS app, by running `npm run ios` from the root of the project. 
-- The first build will take some time, but on a successful build it will start up a simulator.
+- The first build will take some time, but on a successful build it will launch the simulator.
+
+If all has gone well you'll see an initial screen like the one below.
+
+## Screenshots
+
+<img src="https://trello-attachments.s3.amazonaws.com/5cb1a4d1b9cfc93bc4f0ba3f/766x1410/a162f989b8a9d74e9b33e0e932116bb7/Screenshot_2019-04-13_at_10.01.40.png">
 
