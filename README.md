@@ -19,13 +19,14 @@ Built with React Native, Redux, Firebase.
 - As the project hasn't been deployed yet, it will currently require [Xcode](https://developer.apple.com/xcode/) to view the application on a simulator.
 - Download [zip file](https://gitlab.doc.gold.ac.uk/sakth050/nutrivo/-/archive/master/nutrivo-master.zip) or clone the repository to your local computer using the command line `git clone https://gitlab.doc.gold.ac.uk/sakth050/nutrivo.git`
 - Install dependencies: `npm install`
-- Install the following npm packages - redux (thunk), firebase library, lodash, axios, icons:
-`npm i --save react-redux redux`
-`npm i --save redux-thunk`
-`npm i --save firebase`
-`npm i --save axios`
-`npm i --save lodash`
-`npm install react-native-vector-icons` 
+- Install the following npm packages:
+- `npm i --save react-redux redux`
+- `npm i --save redux-thunk`
+- `npm i --save firebase`
+- `npm i --save axios`
+- `npm i --save lodash`
+- `npm i react-native-router-flux`
+- `npm install react-native-vector-icons` 
 - Execute react-native link: `react-native link react-native-vector-icons`
 - Open the **ios** folder from the root of the project, and open **.xcodeproj** file on Xcode, then select **AppDelegate.m** file and run the iOS app.
 - Alternatively, build and run the iOS app, by running `npm run ios` from the root of the project. 
@@ -37,3 +38,15 @@ If all has gone well you'll see an initial screen like the one below.
 
 <img src="https://trello-attachments.s3.amazonaws.com/5cb1a4d1b9cfc93bc4f0ba3f/766x1410/a162f989b8a9d74e9b33e0e932116bb7/Screenshot_2019-04-13_at_10.01.40.png">
 
+## Personal Use
+### Using ESLint for Debugging
+- `npm i eslint-config-rallycoding`
+- `touch .eslintrc`
+- Paste the following content into the file
+`{
+    extends: "rallycoding",
+    "rules": {
+    "arrow-body-style": 0
+    }
+}
+`
