@@ -1,11 +1,13 @@
 import React, { } from 'react';
 import {
+  View,
   Text
 } from 'react-native';
 import { Container, Button, Segment, Content } from 'native-base';
 
 const GuideScreen = () => {
   return (
+    <View style={styles.container}>
     <Container>
       <Segment>
           <Button first>
@@ -22,22 +24,14 @@ const GuideScreen = () => {
           <Text>Awesome segment</Text>
         </Content>
     </Container>
+    </View>
   );
 };
 
-// const styles = {
-//   container: {
-//     flex: 1,
-//     justifyContent: 'center',
-//     alignItems: 'center',
-//     backgroundColor: '#F8F8F8',
-//   },
-//   welcome: {
-//     fontSize: 20,
-//     textAlign: 'center',
-//     margin: 10,
-//     color: '#000000',
-//   }
-// };
+const styles = {
+  container: {
+    flex: 1,
+  }
+};
 
 export default GuideScreen;
