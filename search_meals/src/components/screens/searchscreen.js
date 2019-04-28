@@ -13,13 +13,13 @@ class SearchScreen extends Component {
   state = {
     mealSearcher: '',
     onCall: true,
-    data: {}
+    data: []
   }
 
   searchMeals = () => {
     this.setState({ onCall: true });
     const self = this;
-    axios.get('http://pokeapi.co/api/v2/pokemon/' + this.state.mealSearcher.toLowerCase())
+    axios.get(`http://pokeapi.co/api/v2/pokemon/${this.state.mealSearcher.toLowerCase()}`)
       .then((response) => {
         console.log(response.data);
         self.setState({ data: response.data });
