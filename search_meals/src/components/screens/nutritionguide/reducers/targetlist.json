@@ -1,0 +1,37 @@
+[
+{"id": 0,
+"nutrient": "Fibre",
+"image": "https://cdn.newsapi.com.au/image/v1/a259f1098cf4a1d63affd72da4556daa",
+"description": "Fiber is a type of carbohydrate that cannot be digested and has 2 forms, soluble and insoluble. Eating fiber helps you feel satiated (feeling full for longer) and promotes bowel health. Good sources of fiber include whole grains, beans, bran and broccoli."
+},
+{"id": 1,
+"nutrient": "Vitamin D",
+"image": "https://i0.wp.com/www.healthline.com/hlcmsresource/images/AN_images/foods-high-in-vitamin-d-1296x728-feature.jpg?w=1155&h=1528",
+"description": "Vitamin D is essential for your bones to be able to absorb calcium, keeping them strong and healthy. It can also be naturally synthesized when your skin is exposed to the sun."
+},
+{"id": 2,
+"nutrient": "Potassium",
+"image": "https://www.bbcgoodfood.com/sites/default/files/guide/guide-image/2017/01/avocado.jpg",
+"description": "Potassium (along with sodium) helps maintain fluid balance in the body; it also promotes muscle function and communication between cells."
+},
+{"id": 3,
+"nutrient": "Calcium",
+"image": "https://draxe.com/wp-content/uploads/2018/04/Calcium_Header.jpg",
+"description": "Calcium not only builds strong bones and teeth, but it also plays a vital role in muscle movement."
+},
+{"id": 4,
+"nutrient": "Iron",
+"image": "https://www.well-beingsecrets.com/wp-content/uploads/Foods-High-in-Iron-800x416.jpg?x51046",
+"description": "Iron is key in how we handle oxygen: it moves oxygen around the body, stores it for future use, and even helps clean up the damaging byproducts left behind by oxygen-using bodily processes. Good sources of iron include lean meats, beans, tofu, and dark/leafy greens."
+},
+{"id": 5,
+"nutrient": "Vitamin A",
+"image": "https://www.healthsomeness.com/wp-content/uploads/2015/06/carrots-555x257.jpg",
+"description": "Vitamin A is important for boosting vision and promoting normal cell function. It can only be absorbed through fat."
+},
+{"id": 6,
+"nutrient": "Vitamin C",
+"image": "https://www.besthealthmag.ca/wp-content/uploads/sites/16/2015/09/Foods-High-In-Vitamin-C-Peppers.jpg",
+"description": "Vitamin C helps to build collagen (a protein that strengthens skin and muscles) and performs damage control on free radicals (harmful substances that are byproducts of normal bodily processes)."
+}
+]
