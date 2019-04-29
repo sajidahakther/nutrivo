@@ -19,21 +19,27 @@ const Button = ({ whenPressed, children }) => {
 const styles = {
   textStyle: {
     alignSelf: 'center',
-    color: '#ff0000',
-    fontSize: 15,
+    color: '#FFFFFF',
+    fontSize: 16,
     fontWeight: 'bold',
-    paddingTop: 5,
-    paddingBottom: 5
+    paddingTop: 10,
+    paddingBottom: 10,
+    letterSpacing: 1,
+    textTransform: 'uppercase'
   },
   buttonStyle: {
     flex: 1,
     alignSelf: 'stretch',
-    backgroundColor: '#fff',
-    borderRadius: 8,
+    backgroundColor: '#FA2133',
+    borderRadius: 20,
     borderWidth: 1,
-    borderColor: '#ff0000',
-    marginLeft: 33,
-    marginRight: 200
+    borderColor: '#FA2133',
+    marginLeft: 15,
+    marginRight: 15,
+    marginTop: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2, },
+    shadowOpacity: 0.2,
   }
 };
 
