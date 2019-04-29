@@ -17,6 +17,12 @@ import ProfileScreen from './components/screens/profilescreen';
 import AddEntry from './components/screens/entries/addentry';
 import EditEntry from './components/screens/entries/editentry';
 
+//Nutrition Guide
+import Macros from './components/screens/nutritionguide/macros';
+import Target from './components/screens/nutritionguide/target';
+import Limit from './components/screens/nutritionguide/limit';
+import PortionSizes from './components/screens/nutritionguide/portionsizes';
+
 const TabIcon = ({ focused, iconName }) => {
   return (
     <View>
@@ -66,6 +72,42 @@ const RouterComponent = () => {
                 component={GuideScreen}
                 title="Nutrition Guide"
               />
+
+                {/* macronutrients */}
+                <Scene
+                  key="macros"
+                  component={Macros}
+                  title="Macronutrients"
+                />
+
+                {/* Nutrients to Target */}
+                <Scene
+                  key="target"
+                  component={Target}
+                  title="Nutrients To Target"
+                />
+
+                {/* Nutrients to Limit */}
+                <Scene
+                  key="limit"
+                  component={Limit}
+                  title="Nutrients To Limit"
+                />
+
+                {/* Smart Food Suggestions */}
+                <Scene
+                  key="searchscreen"
+                  component={SearchScreen}
+                  title="Search"
+                />
+
+                {/* Portion Sizes */}
+                <Scene
+                  key="portionsizes"
+                  component={PortionSizes}
+                  title="Portion Sizes"
+                />
+
             </Scene>
 
             {/* SEARCH SCREEN */}
