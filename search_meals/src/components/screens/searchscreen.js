@@ -46,7 +46,7 @@ class SearchScreen extends Component {
 
   render() {
     return (
-      <ScrollView>
+      // <ScrollView>
       <View style={styles.container}>
       <Header
         searchBar
@@ -63,7 +63,7 @@ class SearchScreen extends Component {
       </Header>
       {this.renderBody()}
       </View>
-      </ScrollView>
+      // </ScrollView>
     );
   }
 }
