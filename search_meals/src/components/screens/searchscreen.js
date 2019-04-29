@@ -5,7 +5,7 @@ import {
 } from 'react-native';
 import axios from 'axios';
 import { Header, Item, Icon, Input } from 'native-base';
-import MealLoader from './search/mealloader';
+// import MealLoader from './search/mealloader';
 import SearchBody from './search/searchbody';
 import DefaultMealList from './search/defaultmeallist';
 
