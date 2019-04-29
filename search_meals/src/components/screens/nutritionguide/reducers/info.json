@@ -1,0 +1,52 @@
+[
+{"id": 0,
+"nutrient": "Fibre",
+"image": "https://cdn.newsapi.com.au/image/v1/a259f1098cf4a1d63affd72da4556daa",
+"description": "Fiber is a type of carbohydrate that cannot be digested and has 2 forms, soluble and insoluble. Eating fiber helps you feel satiated (feeling full for longer) and promotes bowel health. Good sources of fiber include whole grains, beans, bran and broccoli.",
+"name": "Sugar",
+"description2": "Sugars are found naturally in most foods, but are also refined into what's known as added sugar. Limiting added sugars in your diet is always encouraged.",
+"image2": "https://geomarketing.com/wp-content/uploads/2015/06/cute-donuts-iphone-wallpaper-phone-wallpapers-pinterest-wallpaper-donuts-pictures-cute-iphone-phone-wallpapers-pinterest-206f81858b5fe9e59ece1b230413517e.jpg"
+},
+{"id": 1,
+"nutrient": "Vitamin D",
+"image": "https://i0.wp.com/www.healthline.com/hlcmsresource/images/AN_images/foods-high-in-vitamin-d-1296x728-feature.jpg?w=1155&h=1528",
+"description": "Vitamin D is essential for your bones to be able to absorb calcium, keeping them strong and healthy. It can also be naturally synthesized when your skin is exposed to the sun.",
+"name": "Trans Fat",
+"description2": "Eating foods that have high trans fat, or that contain partially hydrogenated fats (like margarine and shortening), can increase your risk for heart disease.",
+"image2": "https://foodwatch.com.au/images/stories/p-fats/iStock-POPCORN839992974.jpg"
+},
+{"id": 2,
+"nutrient": "Potassium",
+"image": "https://www.bbcgoodfood.com/sites/default/files/guide/guide-image/2017/01/avocado.jpg",
+"description": "Potassium (along with sodium) helps maintain fluid balance in the body; it also promotes muscle function and communication between cells.",
+"name": "Cholesterol",
+"description2": "Cholesterol is a fat-based substance that is important for many bodily functions. However, too much cholesterol in your diet can increase your risk for heart disease.",
+"image2": "https://www.chowstatic.com/assets/2015/04/31401_easy_flank_steak.jpg"
+},
+{"id": 3,
+"nutrient": "Calcium",
+"image": "https://draxe.com/wp-content/uploads/2018/04/Calcium_Header.jpg",
+"description": "Calcium not only builds strong bones and teeth, but it also plays a vital role in muscle movement.",
+"name": "Sodium",
+"description2": "Sodium (along with potassium) helps balance fluid levels in the body. However, too much sodium can cause your body to retain too much fluid, leading to increased blood pressure.",
+"image2": "https://news.yale.edu/sites/default/files/styles/featured_media/public/adobestock_196225285.jpeg?itok=FyR9F85F&c=07307e7d6a991172b9f808eb83b18804"
+},
+{"id": 4,
+"nutrient": "Iron",
+"image": "https://www.well-beingsecrets.com/wp-content/uploads/Foods-High-in-Iron-800x416.jpg?x51046",
+"description": "Iron is key in how we handle oxygen: it moves oxygen around the body, stores it for future use, and even helps clean up the damaging byproducts left behind by oxygen-using bodily processes. Good sources of iron include lean meats, beans, tofu, and dark/leafy greens.",
+"name": "Saturated Fat",
+"description2": "Eating too much saturated fat can increase your bad (LDL) cholesterol levels, which can increase your risk for heart disease.",
+"image2": "https://www.cancer.gov/PublishedContent/Images/images/high-fat-meal-article.__v40082665.jpg"
+},
+{"id": 5,
+"nutrient": "Vitamin A",
+"image": "https://www.healthsomeness.com/wp-content/uploads/2015/06/carrots-555x257.jpg",
+"description": "Vitamin A is important for boosting vision and promoting normal cell function. It can only be absorbed through fat."
+},
+{"id": 6,
+"nutrient": "Vitamin C",
+"image": "https://www.besthealthmag.ca/wp-content/uploads/sites/16/2015/09/Foods-High-In-Vitamin-C-Peppers.jpg",
+"description": "Vitamin C helps to build collagen (a protein that strengthens skin and muscles) and performs damage control on free radicals (harmful substances that are byproducts of normal bodily processes)."
+}
+]

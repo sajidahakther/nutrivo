@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { ListView } from 'react-native';
 import { connect } from 'react-redux';
-import ListItem from './listitem';
+import LimitItem from './limititem';
 
 class LimitList extends Component {
   componentWillMount() {
@@ -13,7 +13,7 @@ class LimitList extends Component {
   }
 
   renderRow(library) {
-    return <ListItem library={library} />;
+    return <LimitItem library={library} />;
   }
 
   render() {
