@@ -14,6 +14,7 @@
     "native-base": "^2.12.1",
     "react": "16.8.3",
     "react-native": "0.59.5",
+    "react-native-highcharts": "^1.0.2",
     "react-native-router-flux": "^4.0.6",
     "react-native-vector-icons": "^6.4.2",
     "react-redux": "^7.0.2",
