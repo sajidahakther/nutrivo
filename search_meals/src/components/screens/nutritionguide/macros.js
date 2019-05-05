@@ -1,36 +1,31 @@
-import React, { } from 'react';
+import React, { Component } from 'react';
 import {
   Text,
   View
 } from 'react-native';
+import { Container, Header, Content, Tab, Tabs } from 'native-base';
+import Tab1 from './macros/protein1';
+import Tab2 from './macros/carb2';
+import Tab3 from './macros/fat3';
 import { Actions } from 'react-native-router-flux';
 
-const Macros = () => {
-  return (
-    <View style={styles.container}>
-      <Text
-        style={styles.welcome}
-        onPress={() => Actions.overviewscreen()}
-      >
-       Macronutrients
-      </Text>
-    </View>
-  );
-};
-
-const styles = {
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#F8F8F8',
-  },
-  welcome: {
-    fontSize: 20,
-    textAlign: 'center',
-    margin: 10,
-    color: '#000000',
+export default class TabsExample extends Component {
+  render() {
+    return (
+      <Container>
+        <Header hasTabs />
+        <Tabs>
+          <Tab heading="Protein">
+            <Tab1 />
+          </Tab>
+          <Tab heading="Carbohydrate">
+            <Tab2 />
+          </Tab>
+          <Tab heading="Fat">
+            <Tab3 />
+          </Tab>
+        </Tabs>
+      </Container>
+    );
   }
-};
-
-export default Macros;
+}
