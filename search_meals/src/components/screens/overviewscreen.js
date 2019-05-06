@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {
-  Image
+  Image,
+  Linking
 } from 'react-native';
 import {
   Container,
@@ -21,27 +22,62 @@ export default class OverviewScreen extends Component {
       <Container>
         <Content>
           <Card style={{ flex: 0 }}>
-          <CardItem header bordered style={styles.textColour}>
-           <Text>Total Calories</Text>
+          <CardItem header bordered>
+           <Text style={styles.textColour}>Total Calories</Text>
          </CardItem>
             <CardItem>
               <Body>
                 <Image
-                  source={{ uri: 'https://file.mockplus.com/image/2018/09/2f362750-f709-4bda-9bc5-ace1f13f4110.gif' }}
+                  source={{ uri: 'https://trello-attachments.s3.amazonaws.com/5c4f75445887e652c03eec1e/5ccf5d51ec12ec8d47577975/fed8527b7a49f10ecd676d6f9b0dcda5/dnk.png' }}
                   style={styles.image}
                 />
               </Body>
             </CardItem>
             <CardItem>
               <Left>
-                <Button transparent bordered danger>
-                  <Text>Calorie Calculator</Text>
+                <Button
+                  light
+                  onPress={() => Linking.openURL('https://www.calculator.net/calorie-calculator.html')}
+                >
+                  <Text style={styles.buttonText}>Calorie Calculator</Text>
                 </Button>
               </Left>
 
               <Right>
-                <Button transparent bordered danger>
-                  <Text>Edit</Text>
+                <Button iconLeft light>
+                  <Icon name='cog' />
+                  <Text style={styles.buttonText}>Settings</Text>
+                </Button>
+              </Right>
+            </CardItem>
+          </Card>
+
+          <Card style={{ flex: 0 }}>
+          <CardItem header bordered>
+           <Text style={styles.textColour}>Macronutrients</Text>
+         </CardItem>
+            <CardItem>
+              <Body>
+                <Image
+                  source={{ uri: 'https://trello-attachments.s3.amazonaws.com/5c4f75445887e652c03eec1e/5ccf5d51ec12ec8d47577975/6b55503a558aba1d94b2bb119702f511/bdj.png' }}
+                  style={styles.image}
+                />
+              </Body>
+            </CardItem>
+            <CardItem>
+              <Left>
+              <Button
+                light
+                onPress={() => Linking.openURL('https://healthyeater.com/flexible-dieting-calculator')}
+              >
+                <Text style={styles.buttonText}>Macro Ratio Calculator</Text>
+              </Button>
+              </Left>
+
+              <Right>
+                <Button iconLeft light>
+                  <Icon name='cog' />
+                  <Text style={styles.buttonText}>Settings</Text>
                 </Button>
               </Right>
             </CardItem>
@@ -49,53 +85,30 @@ export default class OverviewScreen extends Component {
 
           <Card style={{ flex: 0 }}>
           <CardItem header bordered style={styles.textColour}>
-           <Text>Macronutrients</Text>
+           <Text style={styles.textColour}>Target Nutrient Intake</Text>
          </CardItem>
             <CardItem>
               <Body>
                 <Image
-                  source={{ uri: 'https://file.mockplus.com/image/2018/09/2f362750-f709-4bda-9bc5-ace1f13f4110.gif' }}
+                  source={{ uri: 'https://trello-attachments.s3.amazonaws.com/5c4f75445887e652c03eec1e/5ccf5d51ec12ec8d47577975/4cedba4de311be2d10a23871d1b5ce9f/jsanj.png' }}
                   style={styles.image}
                 />
               </Body>
             </CardItem>
             <CardItem>
               <Left>
-                <Button transparent bordered danger>
-                  <Text>Macro Ratio Calculator</Text>
+                <Button
+                  light
+                  onPress={() => Linking.openURL('http://www.dietandfitnesstoday.com/rda.php')}
+                >
+                  <Text style={styles.buttonText}>Find Your RDA</Text>
                 </Button>
               </Left>
 
               <Right>
-                <Button transparent bordered danger>
-                  <Text>Edit</Text>
-                </Button>
-              </Right>
-            </CardItem>
-          </Card>
-
-          <Card style={{ flex: 0 }}>
-          <CardItem header bordered style={styles.textColour}>
-           <Text>Target Nutrient Intake</Text>
-         </CardItem>
-            <CardItem>
-              <Body>
-                <Image
-                  source={{ uri: 'https://file.mockplus.com/image/2018/09/2f362750-f709-4bda-9bc5-ace1f13f4110.gif' }}
-                  style={styles.image}
-                />
-              </Body>
-            </CardItem>
-            <CardItem>
-              <Left>
-                <Button transparent bordered danger>
-                  <Text>Find Your RDA</Text>
-                </Button>
-              </Left>
-
-              <Right>
-                <Button transparent bordered danger>
-                  <Text>Edit</Text>
+                <Button iconLeft light>
+                  <Icon name='cog' />
+                  <Text style={styles.buttonText}>Settings</Text>
                 </Button>
               </Right>
             </CardItem>
@@ -108,11 +121,15 @@ export default class OverviewScreen extends Component {
 
 const styles = {
   image: {
-    height: 200,
+    height: 180,
     flex: 1,
     width: 340
   },
   textColour: {
-    color: '#FA2133'
+    color: '#575757'
+  },
+  buttonText: {
+    fontSize: 14,
+    color: '#575757'
   }
 };
