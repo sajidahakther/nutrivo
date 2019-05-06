@@ -2,7 +2,20 @@ import _ from 'lodash';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { ListView } from 'react-native';
-import { Container, Content, Card, CardItem, Left, Right, Text, Button, Icon } from 'native-base';
+import {
+  Container,
+  Content,
+  Card,
+  CardItem,
+  Left,
+  Right,
+  Text,
+  Button,
+  Icon,
+  Tab,
+  Tabs,
+  ScrollableTab
+} from 'native-base';
 import { Actions } from 'react-native-router-flux';
 import { entriesFetch } from '../../actions';
 import EntryListItem from './entries/entrylistitem';
@@ -55,11 +68,36 @@ class EntriesScreen extends Component {
           </Card>
           <Card>
             <CardItem>
-            <ListView
-              enableEmptySections
-              dataSource={this.dataSource}
-              renderRow={this.renderRow} // renders all the entry items in a row
-            />
+              <Tabs renderTabBar={() => <ScrollableTab />}>
+                <Tab heading="Breakfast">
+                  <ListView
+                    enableEmptySections
+                    dataSource={this.dataSource}
+                    renderRow={this.renderRow} // renders all the entry items in a row
+                  />
+                </Tab>
+                <Tab heading="Lunch">
+                  <ListView
+                    enableEmptySections
+                    dataSource={this.dataSource}
+                    renderRow={this.renderRow} // renders all the entry items in a row
+                  />
+                </Tab>
+                <Tab heading="Dinner">
+                  <ListView
+                    enableEmptySections
+                    dataSource={this.dataSource}
+                    renderRow={this.renderRow} // renders all the entry items in a row
+                  />
+                </Tab>
+                <Tab heading="Snack">
+                  <ListView
+                    enableEmptySections
+                    dataSource={this.dataSource}
+                    renderRow={this.renderRow} // renders all the entry items in a row
+                  />
+                </Tab>
+              </Tabs>
             </CardItem>
           </Card>
         </Content>
