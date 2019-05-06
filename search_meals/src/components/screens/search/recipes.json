@@ -1,8 +1,9 @@
 [
 {
 "title":"Crispy Baked Falafel",
-"description":"30 min · 320 calories",
-"tags":["gluten-free"," vegan"," halal"],
+"time":"30 min · 320 calories",
+"description":"These falafels are golden brown and crispy on the outside. The insides are tender, delicious, and full of fresh herbs.",
+"tags":"vegan",
 "url":"https://cookieandkate.com/2018/crispy-falafel-recipe/",
 "image":"https://cookieandkate.com/images/2018/05/falafel-salad.jpg",
 "thumbnailimage":"https://cookieandkate.com/images/2018/05/falafel-salad.jpg"
@@ -10,8 +11,9 @@
 
 {
 "title":"Peanut Soba Noodle Slaw",
-"description":"20 min · 295 calories",
-"tags":["gluten-free"," vegan"," halal"],
+"time":"20 min · 295 calories",
+"description":"Healthy Asian slaw made with cabbage, carrots and soba noodles, tossed in a bold peanut-sesame sauce.",
+"tags":"halal",
 "url":"https://cookieandkate.com/2018/peanut-soba-noodle-slaw-recipe/",
 "image":"https://cookieandkate.com/images/2014/01/peanut-soba-noodles-slaw.jpg",
 "thumbnailimage":"https://cookieandkate.com/images/2014/01/peanut-soba-noodles-slaw.jpg"
@@ -19,8 +21,9 @@
 
 {
 "title":"Vegetable Paella",
-"description":"10 min · 258 calories",
-"tags":["gluten-free"," vegan"," halal"],
+"time":"10 min · 258 calories",
+"description":"Loaded with vegetables, chickpeas, and savory, smoky rice. This Spanish dish is perfect for parties.",
+"tags":"gluten-free",
 "url":"https://cookieandkate.com/2017/vegetable-paella-recipe/",
 "image":"https://cookieandkate.com/images/2017/10/best-vegetable-paella-recipe-2.jpg",
 "thumbnailimage":"https://cookieandkate.com/images/2017/10/best-vegetable-paella-recipe-2.jpg"
@@ -28,8 +31,9 @@
 
 {
 "title":"Sweet Potato Enchiladas",
-"description":"25 min · 303 calories",
-"tags":["gluten-free"," vegan"," halal"],
+"time":"25 min · 303 calories",
+"description":"The enchiladas are stuffed with creamy, hearty sweet potato, plus black beans, feta cheese, and spices.",
+"tags":"gluten-free",
 "url":"https://cookieandkate.com/2017/black-bean-sweet-potato-enchiladas/",
 "image":"https://cookieandkate.com/images/2011/03/baked-sweet-potato-enchiladas-3.jpg",
 "thumbnailimage":"https://cookieandkate.com/images/2011/03/baked-sweet-potato-enchiladas-3.jpg"
@@ -37,8 +41,9 @@
 
 {
 "title":"Thai Red Curry",
-"description":"35 min · 320 calories",
-"tags":["gluten-free"," vegan"," halal"],
+"time":"35 min · 320 calories",
+"description":"Tastier than takeout and healthier, too. This recipe is vegetarian, vegan and gluten free for all to enjoy.",
+"tags":"vegan",
 "url":"https://cookieandkate.com/2015/thai-red-curry-recipe/",
 "image":"https://cookieandkate.com/images/2015/10/thai-red-curry-recipe-with-vegetables-1-1.jpg",
 "thumbnailimage":"https://cookieandkate.com/images/2015/10/thai-red-curry-recipe-with-vegetables-1-1.jpg"

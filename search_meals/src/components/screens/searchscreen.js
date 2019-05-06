@@ -3,7 +3,7 @@ import {
   View
 } from 'react-native';
 import axios from 'axios';
-import { Header, Item, Icon, Input } from 'native-base';
+import { Header, Item, Icon, Input, Container, Content } from 'native-base';
 // import MealLoader from './search/mealloader';
 import SearchBody from './search/searchbody';
 import DefaultMealList from './search/defaultmeallist';
@@ -46,23 +46,25 @@ class SearchScreen extends Component {
   render() {
     return (
       // <ScrollView>
-      <View style={styles.container}>
-      <Header
-        searchBar
-        rounded
-      >
-      <Item>
-        <Icon name="ios-search" onPress={this.searchMeals} />
-        <Input
-          value={this.state.searchMeals}
-          placeholder="Search Meals"
-          onChangeText={(searchMeals) => this.setState({ searchMeals })}
-        />
-      </Item>
-      </Header>
-      {this.renderBody()}
-      </View>
-      // </ScrollView>
+      <Container style={styles.container}>
+        <Content>
+          <Header
+            searchBar
+            rounded
+          >
+          <Item>
+            <Input
+              style={{ paddingLeft: 15 }}
+              value={this.state.searchMeals}
+              placeholder="Search meals"
+              onChangeText={(searchMeals) => this.setState({ searchMeals })}
+            />
+            <Icon style={styles.searchicon} name="search" onPress={this.searchMeals} />
+          </Item>
+          </Header>
+          {this.renderBody()}
+        </Content>
+      </Container>
     );
   }
 }
@@ -70,6 +72,11 @@ class SearchScreen extends Component {
 const styles = {
   container: {
     flex: 1,
+    backgroundColor: '#E8E8E8'
+  },
+  searchicon: {
+    fontWeight: 'bold',
+    color: '#383838', // dark grey
   }
 };
 

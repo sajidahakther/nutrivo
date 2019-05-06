@@ -1,56 +1,59 @@
 import React from 'react';
-import { Text, View, Image, Linking } from 'react-native';
-import Card from './card';
-import CardSection from './cardsection';
-import Button from './button';
+import { Image, Linking } from 'react-native';
+import { Card, CardItem, Text, Button, Icon, Left, Body, Right } from 'native-base';
 
 const MealDetail = ({ meal1 }) => {
-  const { title, description, thumbnailimage, tags, url } = meal1;
-  const { mealThumbnail, likeButton, mealText, mealTitle, mealDescription, mealTags } = styles;
+  const { title, description, thumbnailimage, tags, url, time } = meal1;
+  const { mealTitle, mealDescription } = styles;
 
   return (
-    <Card>
-      <View>
-        <Image
-          style={mealThumbnail}
-          source={{ uri: thumbnailimage }}
-        />
-      </View>
-
-      <CardSection>
-        <View>
-          <Text style={likeButton}> ♡ </Text>
-        </View>
-        <View style={mealText}>
-          <Text style={mealTitle}>{title}</Text>
-          <Text style={mealDescription}>{description}</Text>
-          <Text style={mealTags}>{tags}</Text>
-        </View>
-      </CardSection>
-
-      <CardSection>
-        <Button whenPressed={() => Linking.openURL(url)}>
-          View recipe
-        </Button>
-      </CardSection>
-
-    </Card>
+         <Card>
+           <CardItem cardBody>
+             <Image
+               // style={mealThumbnail}
+               source={{ uri: thumbnailimage }}
+               style={{ height: 200, width: null, flex: 1 }}
+             />
+           </CardItem>
+           <CardItem>
+            <Text style={mealTitle}>{title}</Text>
+           </CardItem>
+           <CardItem>
+            <Body>
+             <Text style={mealDescription}>{description}</Text>
+            </Body>
+            </CardItem>
+            <CardItem>
+              <Left>
+               <Button rounded light>
+                 <Text style={styles.buttonText}>{time}</Text>
+               </Button>
+              </Left>
+              <Body>
+               <Button rounded light>
+                 <Text style={styles.buttonText}>{tags}</Text>
+               </Button>
+             </Body>
+           </CardItem>
+           <CardItem>
+             <Left>
+               <Button transparent>
+                 <Icon style={styles.hearticon} active name="heart" />
+                 <Text style={styles.buttonText}>Favourite</Text>
+               </Button>
+             </Left>
+             <Right>
+               <Button transparent onPress={() => Linking.openURL(url)}>
+                  <Icon style={styles.eyeicon} active name="eye" />
+                  <Text style={styles.buttonText}>View Recipe</Text>
+                </Button>
+             </Right>
+           </CardItem>
+         </Card>
   );
 };
 
 const styles = {
-  mealThumbnail: {
-    height: 200
-  },
-  likeButton: {
-    fontSize: 27,
-    color: '#ff0000', // red
-  },
-  mealText: {
-    flexDirection: 'column',
-    justifyContent: 'space-around',
-    paddingTop: 5
-  },
   mealTitle: {
     fontWeight: 'bold',
     color: '#383838', // dark grey
@@ -61,11 +64,18 @@ const styles = {
     color: '#707070',
     paddingBottom: 2
   },
-  mealTags: {
-    color: '#818284',
-    backgroundColor: '#F4F4F4',
-    padding: 2
-  }
+  buttonText: {
+    fontSize: 14,
+    color: '#575757'
+  },
+  hearticon: {
+    color: '#FA2133',
+    fontSize: 15
+  },
+  eyeicon: {
+    color: '#575757',
+    fontSize: 16
+  },
 };
 
 export default MealDetail;

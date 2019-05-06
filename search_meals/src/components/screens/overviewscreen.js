@@ -19,7 +19,7 @@ import {
 export default class OverviewScreen extends Component {
   render() {
     return (
-      <Container>
+      <Container style={styles.background}>
         <Content>
           <Card style={{ flex: 0 }}>
           <CardItem header bordered>
@@ -45,7 +45,7 @@ export default class OverviewScreen extends Component {
 
               <Right>
                 <Button iconLeft light>
-                  <Icon name='cog' />
+                  <Icon style={styles.icon} name='cog' />
                   <Text style={styles.buttonText}>Settings</Text>
                 </Button>
               </Right>
@@ -76,7 +76,7 @@ export default class OverviewScreen extends Component {
 
               <Right>
                 <Button iconLeft light>
-                  <Icon name='cog' />
+                  <Icon style={styles.icon} name='cog' />
                   <Text style={styles.buttonText}>Settings</Text>
                 </Button>
               </Right>
@@ -107,7 +107,7 @@ export default class OverviewScreen extends Component {
 
               <Right>
                 <Button iconLeft light>
-                  <Icon name='cog' />
+                  <Icon style={styles.icon} name='cog' />
                   <Text style={styles.buttonText}>Settings</Text>
                 </Button>
               </Right>
@@ -126,10 +126,17 @@ const styles = {
     width: 340
   },
   textColour: {
-    color: '#575757'
+    color: '#383838'
   },
   buttonText: {
     fontSize: 14,
     color: '#575757'
+  },
+  icon: {
+    color: '#575757',
+    fontSize: 15,
+  },
+  background: {
+    backgroundColor: '#E8E8E8'
   }
 };
