@@ -129,12 +129,12 @@ const styles = {
     color: '#383838'
   },
   buttonText: {
-    fontSize: 14,
+    fontSize: 16,
     color: '#575757'
   },
   icon: {
     color: '#575757',
-    fontSize: 15,
+    fontSize: 17,
   },
   background: {
     backgroundColor: '#E8E8E8'

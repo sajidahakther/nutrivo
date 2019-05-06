@@ -60,7 +60,7 @@ class EntriesScreen extends Component {
                   light
                   onPress={() => Actions.addentry()}
                 >
-                  <Icon style={styles.icon} name="plus" />
+                  <Icon style={styles.icon} name="add" />
                   <Text style={styles.buttonText}>Enter Meal</Text>
                 </Button>
               </Right>
@@ -68,29 +68,44 @@ class EntriesScreen extends Component {
           </Card>
           <Card>
             <CardItem>
-              <Tabs renderTabBar={() => <ScrollableTab />}>
-                <Tab heading="Breakfast">
+              <Tabs
+                renderTabBar={() => <ScrollableTab />}
+                tabBarUnderlineStyle={{ backgroundColor: '#FA2133' }}
+              >
+                <Tab
+                  heading="Breakfast"
+                  activeTextStyle={{ color: '#FA2133' }}
+                >
                   <ListView
                     enableEmptySections
                     dataSource={this.dataSource}
                     renderRow={this.renderRow} // renders all the entry items in a row
                   />
                 </Tab>
-                <Tab heading="Lunch">
+                <Tab
+                  heading="Lunch"
+                  activeTextStyle={{ color: '#FA2133' }}
+                >
                   <ListView
                     enableEmptySections
                     dataSource={this.dataSource}
                     renderRow={this.renderRow} // renders all the entry items in a row
                   />
                 </Tab>
-                <Tab heading="Dinner">
+                <Tab
+                  heading="Dinner"
+                  activeTextStyle={{ color: '#FA2133' }}
+                >
                   <ListView
                     enableEmptySections
                     dataSource={this.dataSource}
                     renderRow={this.renderRow} // renders all the entry items in a row
                   />
                 </Tab>
-                <Tab heading="Snack">
+                <Tab
+                  heading="Snack"
+                  activeTextStyle={{ color: '#FA2133' }}
+                >
                   <ListView
                     enableEmptySections
                     dataSource={this.dataSource}
@@ -98,6 +113,9 @@ class EntriesScreen extends Component {
                   />
                 </Tab>
               </Tabs>
+            </CardItem>
+            <CardItem>
+              <Text style={styles.instructions}>Tap on a food to edit entry</Text>
             </CardItem>
           </Card>
         </Content>
@@ -121,11 +139,15 @@ const styles = {
       backgroundColor: '#E8E8E8'
   },
   buttonText: {
-    fontSize: 15,
+    fontSize: 16,
     color: '#383838'
   },
   icon: {
-    fontSize: 17
+    fontSize: 18
+  },
+  instructions: {
+    fontStyle: 'italic',
+    color: '#7E7E7E',
   }
 };
 

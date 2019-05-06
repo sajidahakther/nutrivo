@@ -141,7 +141,7 @@ const RouterComponent = () => {
                 <Scene
                   key="addentry"
                   component={AddEntry}
-                  title="Add Food"
+                  title="Add Entry"
                 />
 
                 {/* form to edit the entry */}

@@ -1,9 +1,10 @@
 import _ from 'lodash';
 import React, { Component } from 'react';
+import { Container, Content, Button, CardItem, Card, Left, Right, Text } from 'native-base';
 import { connect } from 'react-redux';
 import EntryForm from './entryform';
 import { entryupdate, entrysave, entrydelete } from '../../../actions';
-import { Card, CardSection, Button, Confirm } from '../../common';
+import { Confirm } from '../../common';
 
 class EditEntry extends Component {
 
@@ -34,33 +35,54 @@ class EditEntry extends Component {
 
   render() {
     return (
-      <Card>
+      <Container style={styles.container}>
+        <Content>
+          <EntryForm />
+          <Card>
+            <CardItem>
+              <Left>
+                <Button
+                  block
+                  light
+                  onPress={() => this.setState({ showModal: !this.state.showModal })}
+                >
+                  <Text style={styles.buttonText}> Delete Entry </Text>
+                </Button>
+              </Left>
 
-        <EntryForm />
+              <Right>
+                <Button block light onPress={this.onButtonPress.bind(this)}>
+                  <Text style={styles.buttonText}> Save Changes </Text>
+                </Button>
+              </Right>
+            </CardItem>
+          </Card>
 
-        <CardSection>
-          <Button onPress={this.onButtonPress.bind(this)}>
-            Save Changes
-          </Button>
-        </CardSection>
+          <Card>
+            <Confirm
+              visible={this.state.showModal}
+              onAccept={this.onAccept.bind(this)}
+              onDecline={this.onDecline.bind(this)}
+            >
+              Are you sure you want to delete this entry?
+            </Confirm>
+          </Card>
+        </Content>
+      </Container>
 
-        <CardSection>
-          <Button onPress={() => this.setState({ showModal: !this.state.showModal })}>
-            Delete
-          </Button>
-        </CardSection>
-
-        <Confirm
-          visible={this.state.showModal}
-          onAccept={this.onAccept.bind(this)}
-          onDecline={this.onDecline.bind(this)}
-        >
-          Are you sure you want to delete this entry?
-        </Confirm>
-      </Card>
     );
   }
 }
+
+const styles = {
+  container: {
+    backgroundColor: '#E8E8E8'
+  },
+  buttonText: {
+    fontSize: 16,
+    color: '#383838'
+  }
+};
 
 const mapStateToProps = (state) => {
   const { food, serving, duration } = state.entry;

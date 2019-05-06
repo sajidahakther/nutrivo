@@ -1,11 +1,9 @@
 import React from 'react';
-import { Text, View, Modal } from 'react-native';
-import { CardSection } from './cardsection';
-import { Button } from './button';
-import { Card } from './card';
+import { View, Modal } from 'react-native';
+import { Text, Card, CardItem, Button, Right, Left } from 'native-base';
 
 const Confirm = ({ children, visible, onAccept, onDecline }) => {
-  const { container, text, cardsect } = styles;
+  const { container, text, buttonText, buttons, buttonWidth } = styles;
 
   return (
     <Modal
@@ -16,18 +14,19 @@ const Confirm = ({ children, visible, onAccept, onDecline }) => {
     >
       <View style={container}>
         <Card>
+          <CardItem header bordered>
+           <Text style={text}>{children}</Text>
+          </CardItem>
 
-          <CardSection style={cardsect}>
-            <Text style={text}>
-              {children}
-            </Text>
-          </CardSection>
+          <CardItem style={buttons}>
+              <Button style={buttonWidth} light onPress={onAccept}>
+                <Text style={buttonText}>Yes</Text>
+              </Button>
 
-          <CardSection>
-            <Button onPress={onAccept}>Yes</Button>
-            <Button onPress={onDecline}>No</Button>
-          </CardSection>
-
+              <Button style={buttonWidth} light onPress={onDecline}>
+                <Text style={buttonText}>No</Text>
+              </Button>
+          </CardItem>
         </Card>
       </View>
     </Modal>
@@ -35,21 +34,29 @@ const Confirm = ({ children, visible, onAccept, onDecline }) => {
 };
 
 const styles = {
-  cardsect: {
-    justifyContent: 'center',
-  },
   text: {
     flex: 1,
-    fontSize: 18,
+    color: '#383838',
     textAlign: 'center',
-    lineHeight: 40
+  },
+  buttonText: {
+    fontSize: 16,
+    color: '#383838',
+    textAlign: 'center',
   },
   container: {
     backgroundColor: 'rgba(0,0,0,0.75)', // oppacity
     position: 'relative',
     flex: 1,
     justifyContent: 'center'
-  }
+  },
+  buttons: {
+    alignSelf: 'stretch',
+    justifyContent: 'space-between'
+  },
+  buttonWidth: {
+    width: '40%',
+  },
 };
 
 export { Confirm };

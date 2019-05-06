@@ -26,12 +26,12 @@ const MealDetail = ({ meal1 }) => {
             <CardItem>
               <Left>
                <Button rounded light>
-                 <Text style={styles.buttonText}>{time}</Text>
+                 <Text style={styles.tagText}>{time}</Text>
                </Button>
               </Left>
               <Body>
                <Button rounded light>
-                 <Text style={styles.buttonText}>{tags}</Text>
+                 <Text style={styles.tagText}>{tags}</Text>
                </Button>
              </Body>
            </CardItem>
@@ -65,16 +65,20 @@ const styles = {
     paddingBottom: 2
   },
   buttonText: {
+    fontSize: 16,
+    color: '#575757'
+  },
+  tagText: {
     fontSize: 14,
     color: '#575757'
   },
   hearticon: {
     color: '#FA2133',
-    fontSize: 15
+    fontSize: 17
   },
   eyeicon: {
     color: '#575757',
-    fontSize: 16
+    fontSize: 18
   },
 };
 

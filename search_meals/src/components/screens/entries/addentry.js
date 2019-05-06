@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
+import { Container, Content, CardItem, Button, Text } from 'native-base';
 import { connect } from 'react-redux';
 import { entryupdate, addentry } from '../../../actions';
-import { FormCard, SubSection, Button } from '../../common';
+// import { FormCard, SubSection, Button } from '../../common';
 import EntryForm from './entryform';
 
 class AddEntry extends Component {
@@ -14,24 +15,34 @@ class AddEntry extends Component {
   render() {
     console.log(this.props.entry);
     return (
-      <FormCard>
-        {/* Form to add meal */}
-        <EntryForm {...this.props} />
+      <Container style={styles.container}>
+        <Content>
+          {/* Form to add meal */}
+          <EntryForm {...this.props} />
 
-        {/* Press to add food entry */}
-        <SubSection style={styles.buttonSpacing}>
-          <Button onPress={this.onButtonPress.bind(this)}>
-            Add
-          </Button>
-        </SubSection>
-      </FormCard>
+          {/* Press to add food entry */}
+          <CardItem>
+            <Button style={styles.buttonWidth} block light onPress={this.onButtonPress.bind(this)}>
+              <Text style={styles.buttonText}> Add Entry </Text>
+            </Button>
+          </CardItem>
+        </Content>
+      </Container>
     );
   }
 }
 
 const styles = {
-  buttonSpacing: {
-    paddingTop: 10
+  container: {
+    backgroundColor: '#E8E8E8'
+  },
+  buttonText: {
+    fontSize: 16,
+    color: '#383838'
+  },
+  buttonWidth: {
+    textAlign: 'center',
+    width: '100%',
   }
 };
 

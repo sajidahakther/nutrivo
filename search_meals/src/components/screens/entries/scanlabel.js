@@ -36,10 +36,10 @@ export default class ScanLabel extends Component {
 
 const styles = {
   buttonText: {
-    fontSize: 15,
+    fontSize: 16,
     color: '#383838'
   },
   icon: {
-    fontSize: 17
+    fontSize: 18
   }
 };
