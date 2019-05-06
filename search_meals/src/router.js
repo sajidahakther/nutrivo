@@ -136,8 +136,6 @@ const RouterComponent = () => {
                 key="entries"
                 component={EntriesScreen}
                 title="Entries"
-                onRight={() => Actions.addentry()}
-                rightTitle="Add"
               />
                 {/* form to add the meal */}
                 <Scene

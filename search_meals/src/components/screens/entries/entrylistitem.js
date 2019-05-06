@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Text, TouchableWithoutFeedback, View } from 'react-native';
+import { TouchableWithoutFeedback, View } from 'react-native';
+import { Text } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 import { CardSection } from '../../common';
 
@@ -39,15 +40,11 @@ class EntryListItem extends Component {
 
 const styles = {
   food: {
-    paddingLeft: 15,
-    color: '#FA2133',
-    fontSize: 18
+    color: '#383838',
   },
   serving: {
     textAlign: 'right',
-    paddingRight: 15,
-    color: '#585858',
-    fontSize: 18
+    color: '#7E7E7E',
   }
 };
 

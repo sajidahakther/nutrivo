@@ -27,6 +27,7 @@ Built with React Native, Redux, Firebase.
 - `npm i --save lodash`
 - `npm i react-native-router-flux`
 - `npm install react-native-vector-icons` 
+- `npm i native-base`
 - Execute react-native link: `react-native link react-native-vector-icons`
 - Open the **ios** folder from the root of the project, and open **.xcodeproj** file on Xcode, then select **AppDelegate.m** file and run the iOS app.
 - Alternatively, build and run the iOS app, by running `npm run ios` from the root of the project. 
@@ -50,3 +51,6 @@ If all has gone well you'll see an initial screen like the one below.
     }
 }
 `
+## myjson
+- A simple JSON store for mobile apps
+- Current json file: `http://myjson.com/1gj9mk`
