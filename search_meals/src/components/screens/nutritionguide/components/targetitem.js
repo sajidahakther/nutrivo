@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import {
-  Text,
   TouchableWithoutFeedback,
   View,
   LayoutAnimation,
   Image
 } from 'react-native';
+import { CardItem, Body, Text } from 'native-base';
 import { connect } from 'react-redux';
-import { CardSection, SubSection } from './common';
 import * as actions from '../actions';
 
 class ListItem extends Component {
@@ -23,17 +22,19 @@ class ListItem extends Component {
     if (expanded) {
       return (
         <View>
-        <SubSection>
+        <CardItem>
           <Image
             style={nutrientImage}
             source={{ uri: image }}
           />
-          </SubSection>
-          <CardSection>
-            <Text style={nutrientDescription}>
-              {library.description}
-            </Text>
-          </CardSection>
+          </CardItem>
+          <CardItem>
+            <Body>
+              <Text style={nutrientDescription}>
+                {library.description}
+              </Text>
+            </Body>
+          </CardItem>
         </View>
       );
     }
@@ -48,11 +49,11 @@ class ListItem extends Component {
         onPress={() => this.props.selectLibrary(id)}
       >
         <View>
-          <CardSection>
+          <CardItem>
             <Text style={nutrientName}>
               {nutrient}
             </Text>
-          </CardSection>
+          </CardItem>
           {this.renderDescription()}
         </View>
       </TouchableWithoutFeedback>
@@ -62,8 +63,8 @@ class ListItem extends Component {
 
 const styles = {
   nutrientName: {
-    fontSize: 18,
-    paddingLeft: 15
+    fontSize: 16,
+    paddingLeft: 12
   },
   nutrientImage: {
     flex: 1,
@@ -73,9 +74,9 @@ const styles = {
   },
   nutrientDescription: {
     flex: 1,
-    textAlign: 'justify',
-    paddingLeft: 18,
-    paddingRight: 18
+    paddingLeft: 12,
+    paddingRight: 12,
+    color: '#707070'
   }
 };
 

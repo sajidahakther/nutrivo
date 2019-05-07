@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Image } from 'react-native';
 import { Container, Card, CardItem, Body, Text, Accordion } from 'native-base';
 
 const dataArray = [
@@ -59,6 +60,9 @@ export default class Tab1 extends Component {
           <CardItem header bordered>
            <Text style={styles.headerColour}>Sources of Protein</Text>
           </CardItem>
+          <CardItem cardBody>
+             <Image source={{ uri: 'https://cdn1.medicalnewstoday.com/content/images/hero/196/196279/196279_1100.jpg' }} style={{ height: 200, width: null, flex: 1 }} />
+           </CardItem>
           <Accordion
             dataArray={dataArray}
             renderContent={this._renderContent}
@@ -76,7 +80,7 @@ const styles = {
     color: '#383838'
   },
   textColour: {
-    color: '#707070'
+    color: '#707070',
   },
   measurement: {
     color: '#383838',
