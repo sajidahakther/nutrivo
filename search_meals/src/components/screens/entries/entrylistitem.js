@@ -15,7 +15,7 @@ class EntryListItem extends Component {
     return (
       <TouchableWithoutFeedback onPress={this.onRowPress.bind(this)}>
         <View>
-          <CardSection>
+          <CardSection style={{ paddingTop: 20 }}>
             <View style={{ flex: 1, flexDirection: 'row' }}>
 
               <View style={{ flex: 1 }}>

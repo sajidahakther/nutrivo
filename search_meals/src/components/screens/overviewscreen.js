@@ -70,7 +70,7 @@ export default class OverviewScreen extends Component {
                 light
                 onPress={() => Linking.openURL('https://healthyeater.com/flexible-dieting-calculator')}
               >
-                <Text style={styles.buttonText}>Macro Ratio Calculator</Text>
+                <Text style={styles.buttonText}>Calculate Macro Ratio</Text>
               </Button>
               </Left>
 
