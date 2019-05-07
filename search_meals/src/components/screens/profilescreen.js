@@ -1,5 +1,18 @@
 import React, { Component } from 'react';
-import { Container, Content, Card, CardItem, Text, Body } from 'native-base';
+import {
+  Card,
+  CardItem,
+  Container,
+  Content,
+  ListItem,
+  Text,
+  Icon,
+  Left,
+  Body,
+  Right,
+  Switch,
+  Button
+} from 'native-base';
 import { Actions } from 'react-native-router-flux';
 
 export default class ProfileScreen extends Component {
@@ -19,7 +32,7 @@ export default class ProfileScreen extends Component {
             <CardItem bordered>
               <Body>
                 <Text>
-                  Type of diet or dietary requirements.
+                  Type of diet or dietary requirements
                   List of allergens or intolerances.
                   Dietary goals etc.
                 </Text>
@@ -29,6 +42,48 @@ export default class ProfileScreen extends Component {
               <Text>Edit Profile</Text>
             </CardItem>
           </Card>
+
+          <ListItem icon>
+            <Left>
+              <Button style={{ backgroundColor: '#007AFF' }}>
+                <Icon active name="airplane" />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Airplane Mode</Text>
+            </Body>
+            <Right>
+              <Switch value={false} />
+            </Right>
+          </ListItem>
+          <ListItem icon>
+            <Left>
+              <Button style={{ backgroundColor: '#007AFF' }}>
+                <Icon active name="wifi" />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Wi-Fi</Text>
+            </Body>
+            <Right>
+              <Text>GeekyAnts</Text>
+              <Icon active name="arrow-forward" />
+            </Right>
+          </ListItem>
+          <ListItem icon>
+            <Left>
+              <Button style={{ backgroundColor: '#007AFF' }}>
+                <Icon active name="bluetooth" />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Bluetooth</Text>
+            </Body>
+            <Right>
+              <Text>On</Text>
+              <Icon active name="arrow-forward" />
+            </Right>
+          </ListItem>
         </Content>
       </Container>
     );

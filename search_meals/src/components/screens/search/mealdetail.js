@@ -10,7 +10,6 @@ const MealDetail = ({ meal1 }) => {
          <Card>
            <CardItem cardBody>
              <Image
-               // style={mealThumbnail}
                source={{ uri: thumbnailimage }}
                style={{ height: 200, width: null, flex: 1 }}
              />
