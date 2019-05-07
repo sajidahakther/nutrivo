@@ -19,8 +19,7 @@ import EditEntry from './components/screens/entries/editentry';
 
 //Nutrition Guide
 import Macros from './components/screens/nutritionguide/macros';
-import Target from './components/screens/nutritionguide/target';
-import Limit from './components/screens/nutritionguide/limit';
+import NutrientsToMonitor from './components/screens/nutritionguide/nutrientstomonitor';
 import PortionSizes from './components/screens/nutritionguide/portionsizes';
 
 const TabIcon = ({ focused, iconName }) => {
@@ -81,18 +80,11 @@ const RouterComponent = () => {
                   title="Macronutrients"
                 />
 
-                {/* Nutrients to Target */}
+                {/* Nutrients to Monitor */}
                 <Scene
-                  key="target"
-                  component={Target}
-                  title="Nutrients To Target"
-                />
-
-                {/* Nutrients to Limit */}
-                <Scene
-                  key="limit"
-                  component={Limit}
-                  title="Nutrients To Limit"
+                  key="monitor"
+                  component={NutrientsToMonitor}
+                  title="Nutrients"
                 />
 
                 {/* Smart Food Suggestions */}

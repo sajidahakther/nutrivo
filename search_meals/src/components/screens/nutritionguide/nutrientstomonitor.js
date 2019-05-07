@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { Container, Content, Tab, Tabs, ScrollableTab } from 'native-base';
-import Tab1 from './macros/protein1';
-import Tab2 from './macros/carb2';
-import Tab3 from './macros/fat3';
+import Target from './target.js';
+import Limit from './limit.js';
 
-export default class Macronutrients extends Component {
+export default class NutrientsToMonitor extends Component {
   render() {
     return (
       <Container style={styles.container}>
@@ -14,22 +13,16 @@ export default class Macronutrients extends Component {
             tabBarUnderlineStyle={{ backgroundColor: '#FA2133' }}
           >
             <Tab
-              heading="Protein"
+              heading="To Target"
               activeTextStyle={{ color: '#FA2133' }}
             >
-              <Tab1 />
+              <Target />
             </Tab>
             <Tab
-              heading="Carbohydrate"
+              heading="To Limit"
               activeTextStyle={{ color: '#FA2133' }}
             >
-              <Tab2 />
-            </Tab>
-            <Tab
-              heading="Fat"
-              activeTextStyle={{ color: '#FA2133' }}
-            >
-              <Tab3 />
+              <Limit />
             </Tab>
           </Tabs>
         </Content>

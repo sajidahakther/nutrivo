@@ -16,15 +16,9 @@ const GuideScreen = () => {
       </Text>
 
       <Text
-        onPress={() => Actions.target()}
+        onPress={() => Actions.monitor()}
       >
-       Nutrients To Target
-      </Text>
-
-      <Text
-        onPress={() => Actions.limit()}
-      >
-       Nutrients To Limit
+       Nutrients To Monitor
       </Text>
 
       <Text
