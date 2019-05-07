@@ -20,7 +20,6 @@ import { Actions } from 'react-native-router-flux';
 import { entriesFetch } from '../../actions';
 import EntryListItem from './entries/entrylistitem';
 import ScanLabel from './entries/scanlabel';
-// import SmartFoodSuggestions from './entries/smartfoods.js';
 import FoodSwiper from './nutritionguide/smartfoods/foodswiper';
 
 class EntriesScreen extends Component {

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Image, Linking } from 'react-native';
 import { Card, CardItem, Text, Button, Icon, Left, Body, Right } from 'native-base';
+import { IconFill } from '@ant-design/icons-react-native';
 
 const MealDetail = ({ meal1 }) => {
   const { title, description, thumbnailimage, tags, url, time } = meal1;
@@ -37,8 +38,8 @@ const MealDetail = ({ meal1 }) => {
            <CardItem>
              <Left>
                <Button transparent>
-                 <Icon style={styles.hearticon} active name="heart" />
-                 <Text style={styles.buttonText}>Favourite</Text>
+                 <IconFill style={styles.hearticon} name="heart" />
+                 <Text style={styles.faveButtonText}>Favourited</Text>
                </Button>
              </Left>
              <Right>
@@ -63,6 +64,10 @@ const styles = {
     fontSize: 16,
     color: '#575757'
   },
+  faveButtonText: {
+    fontSize: 16,
+    color: '#575757',
+  },
   tagText: {
     fontSize: 14,
     color: '#575757'
@@ -72,7 +77,7 @@ const styles = {
     fontSize: 17
   },
   eyeicon: {
-    color: '#575757',
+    color: '#FA2133',
     fontSize: 18
   },
 };
