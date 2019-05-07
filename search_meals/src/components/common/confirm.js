@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, Modal } from 'react-native';
-import { Text, Card, CardItem, Button, Right, Left } from 'native-base';
+import { Text, Card, CardItem, Button } from 'native-base';
 
 const Confirm = ({ children, visible, onAccept, onDecline }) => {
   const { container, text, buttonText, buttons, buttonWidth } = styles;

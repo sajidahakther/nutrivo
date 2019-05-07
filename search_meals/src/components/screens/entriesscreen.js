@@ -11,11 +11,11 @@ import {
   Right,
   Text,
   Button,
-  Icon,
   Tab,
   Tabs,
   ScrollableTab,
 } from 'native-base';
+import { IconFill } from '@ant-design/icons-react-native';
 import { Actions } from 'react-native-router-flux';
 import { entriesFetch } from '../../actions';
 import EntryListItem from './entries/entrylistitem';
@@ -61,7 +61,9 @@ class EntriesScreen extends Component {
                   light
                   onPress={() => Actions.addentry()}
                 >
-                  <Icon style={styles.icon} name="add" />
+                  <IconFill
+                    style={styles.icon} name="plus-circle"
+                  />
                   <Text style={styles.buttonText}>Enter Meal</Text>
                 </Button>
               </Right>
@@ -157,6 +159,7 @@ const styles = {
   subheaderText: {
     color: '#383838'
   },
+
 };
 
 export default connect(mapStateToProps, { entriesFetch })(EntriesScreen);

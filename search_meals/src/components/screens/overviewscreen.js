@@ -14,7 +14,7 @@ import {
   Left,
   Body,
 } from 'native-base';
-import { IconOutline } from '@ant-design/icons-react-native';
+import { IconOutline, IconFill } from '@ant-design/icons-react-native';
 
 export default class OverviewScreen extends Component {
   render() {
@@ -39,10 +39,11 @@ export default class OverviewScreen extends Component {
             <CardItem>
               <Left>
                 <Button
-                  light
+                  transparent
                   onPress={() => Linking.openURL('https://www.calculator.net/calorie-calculator.html')}
                 >
-                  <Text style={styles.buttonText}>Calorie Calculator</Text>
+                  <IconFill style={styles.questionIcon} name="question-circle" />
+                  <Text style={styles.buttonText}>Calorie Requirement</Text>
                 </Button>
               </Left>
             </CardItem>
@@ -66,10 +67,11 @@ export default class OverviewScreen extends Component {
             <CardItem>
               <Left>
               <Button
-                light
+                transparent
                 onPress={() => Linking.openURL('https://healthyeater.com/flexible-dieting-calculator')}
               >
-                <Text style={styles.buttonText}>Calculate Macro Ratio</Text>
+                <IconFill style={styles.questionIcon} name="question-circle" />
+                <Text style={styles.buttonText}>Macronutrient Ratio</Text>
               </Button>
               </Left>
             </CardItem>
@@ -93,10 +95,11 @@ export default class OverviewScreen extends Component {
             <CardItem>
               <Left>
                 <Button
-                  light
+                  transparent
                   onPress={() => Linking.openURL('http://www.dietandfitnesstoday.com/rda.php')}
                 >
-                  <Text style={styles.buttonText}>Find Your RDA</Text>
+                  <IconFill style={styles.questionIcon} name="question-circle" />
+                  <Text style={styles.buttonText}>Recommended Dietary Allowance</Text>
                 </Button>
               </Left>
             </CardItem>
@@ -126,5 +129,9 @@ const styles = {
   },
   background: {
     backgroundColor: '#E8E8E8'
+  },
+  questionIcon: {
+    fontSize: 18,
+    color: '#707070'
   }
 };

@@ -6,7 +6,7 @@ import { emailChanged, passwordChanged, loginUser } from '../actions';
 import { SubSection, Input, Button, Spinner, FormSection, FormCard } from './common';
 
 // backgroung image is free to use and originally from unsplash: https://unsplash.com/photos/nTZOILVZuOg, edited by me.
-const nutrivobg = require('./assets/mainbg2.png');
+const nutrivobg = require('./assets/testbg.png');
 
 // redux will be in charge of the value of the email and pass
 class LoginForm extends Component {

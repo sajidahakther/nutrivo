@@ -40,6 +40,6 @@ const styles = {
     color: '#383838'
   },
   icon: {
-    fontSize: 18
+    fontSize: 22
   }
 };
