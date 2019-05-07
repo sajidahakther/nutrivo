@@ -58,11 +58,9 @@ const styles = {
     fontWeight: 'bold',
     color: '#383838', // dark grey
     fontSize: 17,
-    paddingBottom: 1
   },
   mealDescription: {
     color: '#707070',
-    paddingBottom: 1
   },
   buttonText: {
     fontSize: 16,

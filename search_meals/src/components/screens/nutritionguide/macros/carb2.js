@@ -4,16 +4,15 @@ import { Container, Card, CardItem, Body, Text, Accordion } from 'native-base';
 const dataArray = [
   {
     title: 'Fibre',
-    content: 'Eating fibre helps you feel full for longer and promotes bowel health. There are two forms of fibre: soluble and insoluble. Good sources of fibre include: whole grains, beans, bran, broccoli',
-    image: 'https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/01/15/13/fibre-foods.jpg?w968h681'
+    content: 'Eating fibre helps you feel full for longer and promotes bowel health. There are two forms of fibre: soluble and insoluble. Good sources of fibre include: Whole Grains, Beans, Bran, Broccoli.',
   },
   {
     title: 'Starch',
-    content: 'Lorem ipsum dolor sit amet'
+    content: 'Your body digests starch to make glucose, which is a vital energy source for every cell. Starch is found in foods such as Grains, Rice and Potatoes.'
   },
   {
     title: 'Sugar',
-    content: 'Lorem ipsum dolor sit amet'
+    content: 'Sugars are found naturally in most foods, but are also refined into what is called Added Sugar. Added Sugars provide no nutritional value and carry lots of empty calories, limiting these in your diet is always encouraged. Some names to look out for: Fructose, Lactose, Barley Malt, Fruit Juice Concentrate.'
   }
 ];
 
@@ -23,7 +22,7 @@ export default class Tab2 extends Component {
        <Text
          style={{
            color: '#707070',
-           padding: 10,
+           padding: 12,
          }}
        >
          {item.content}
