@@ -26,9 +26,10 @@ Built with React Native, Redux, Firebase.
 - `npm i --save axios`
 - `npm i --save lodash`
 - `npm i react-native-router-flux`
-- `npm install react-native-vector-icons` 
 - `npm i native-base`
+- `npm install react-native-vector-icons` 
 - Execute react-native link: `react-native link react-native-vector-icons`
+- `npm i @ant-design/icons-react-native` and see [doc](https://www.npmjs.com/package/@ant-design/icons-react-native) for usage.
 - Open the **ios** folder from the root of the project, and open **.xcodeproj** file on Xcode, then select **AppDelegate.m** file and run the iOS app.
 - Alternatively, build and run the iOS app, by running `npm run ios` from the root of the project. 
 - The first build will take some time, but on a successful build it will launch the simulator.

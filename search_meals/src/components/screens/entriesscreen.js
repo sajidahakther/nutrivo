@@ -15,7 +15,6 @@ import {
   Tab,
   Tabs,
   ScrollableTab,
-  View,
 } from 'native-base';
 import { Actions } from 'react-native-router-flux';
 import { entriesFetch } from '../../actions';
@@ -120,11 +119,6 @@ class EntriesScreen extends Component {
               <Text style={styles.instructions}>Tap on a food to edit entry</Text>
             </CardItem>
           </Card>
-          <Card>
-            <CardItem header bordered>
-             <Text style={styles.textColour}>Smart Food Suggestions</Text>
-            </CardItem>
-          </Card>
           <SmartFoodSuggestions />
         </Content>
       </Container>
@@ -156,16 +150,6 @@ const styles = {
   instructions: {
     fontStyle: 'italic',
     color: '#7E7E7E',
-  },
-  swipes: {
-    flexDirection: 'row',
-    flex: 1,
-    position: 'absolute',
-    bottom: 50,
-    left: 0,
-    right: 0,
-    justifyContent: 'space-between',
-    padding: 15
   },
   textColour: {
     color: '#383838'

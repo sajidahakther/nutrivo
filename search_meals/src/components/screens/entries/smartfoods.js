@@ -1,18 +1,12 @@
 import React, { Component } from 'react';
 import { Image } from 'react-native';
 import {
-  Container,
-  Header,
   View,
   DeckSwiper,
   Card,
   CardItem,
-  Thumbnail,
   Text,
-  Left,
-  Body,
-  Icon,
-  Button
+  Icon
 } from 'native-base';
 
 const cards = [
@@ -26,26 +20,14 @@ const cards = [
 export default class SmartFoodSuggestions extends Component {
   render() {
     return (
-      <Container>
+      <View>
         <View>
           <DeckSwiper
-            ref={(c) => this._deckSwiper = c}
             dataSource={cards}
-            renderEmpty={() =>
-              <View style={{ alignSelf: 'center' }}>
-                <Text>Over</Text>
-              </View>
-            }
             renderItem={item =>
               <Card style={{ elevation: 3 }}>
-                <CardItem>
-                  <Left>
-                    <Thumbnail source={item.image} />
-                    <Body>
-                      <Text>{item.text}</Text>
-                      <Text note>NativeBase</Text>
-                    </Body>
-                  </Left>
+                <CardItem header bordered>
+                 <Text style={styles.textColour}>Smart Food Suggestions</Text>
                 </CardItem>
                 <CardItem cardBody>
                   <Image style={{ height: 300, flex: 1 }} source={item.image} />
@@ -58,30 +40,13 @@ export default class SmartFoodSuggestions extends Component {
             }
           />
         </View>
-        <View style={styles.swipes}>
-          <Button light iconLeft onPress={() => this._deckSwiper._root.swipeLeft()}>
-            <Icon name="arrow-back" />
-            <Text>Previous</Text>
-          </Button>
-          <Button light iconRight onPress={() => this._deckSwiper._root.swipeRight()}>
-            <Icon name="arrow-forward" />
-            <Text>Next</Text>
-          </Button>
-        </View>
-      </Container>
+      </View>
     );
   }
 }
 
 const styles = {
-  swipes: {
-    flexDirection: 'row',
-    flex: 1,
-    position: 'absolute',
-    bottom: 50,
-    left: 0,
-    right: 0,
-    justifyContent: 'space-between',
-    padding: 15
-  }
+  textColour: {
+    color: '#383838'
+  },
 };

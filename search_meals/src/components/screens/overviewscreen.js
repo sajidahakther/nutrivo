@@ -13,8 +13,8 @@ import {
   Right,
   Left,
   Body,
-  Icon
 } from 'native-base';
+import { IconOutline } from '@ant-design/icons-react-native';
 
 export default class OverviewScreen extends Component {
   render() {
@@ -24,6 +24,9 @@ export default class OverviewScreen extends Component {
           <Card style={{ flex: 0 }}>
           <CardItem header bordered>
            <Text style={styles.textColour}>Total Calories</Text>
+           <Right style={{ flex: 1 }}>
+            <IconOutline style={{ fontSize: 24, textAlign: 'right' }} name="ellipsis" />
+           </Right>
          </CardItem>
             <CardItem>
               <Body>
@@ -42,19 +45,15 @@ export default class OverviewScreen extends Component {
                   <Text style={styles.buttonText}>Calorie Calculator</Text>
                 </Button>
               </Left>
-
-              <Right>
-                <Button iconLeft light>
-                  <Icon style={styles.icon} name='cog' />
-                  <Text style={styles.buttonText}>Settings</Text>
-                </Button>
-              </Right>
             </CardItem>
           </Card>
 
           <Card style={{ flex: 0 }}>
           <CardItem header bordered>
            <Text style={styles.textColour}>Macronutrients</Text>
+           <Right style={{ flex: 1 }}>
+            <IconOutline style={{ fontSize: 24, textAlign: 'right' }} name="ellipsis" />
+           </Right>
          </CardItem>
             <CardItem>
               <Body>
@@ -73,19 +72,15 @@ export default class OverviewScreen extends Component {
                 <Text style={styles.buttonText}>Calculate Macro Ratio</Text>
               </Button>
               </Left>
-
-              <Right>
-                <Button iconLeft light>
-                  <Icon style={styles.icon} name='cog' />
-                  <Text style={styles.buttonText}>Settings</Text>
-                </Button>
-              </Right>
             </CardItem>
           </Card>
 
           <Card style={{ flex: 0 }}>
           <CardItem header bordered style={styles.textColour}>
            <Text style={styles.textColour}>Target Nutrient Intake</Text>
+           <Right style={{ flex: 1 }}>
+            <IconOutline style={{ fontSize: 24, textAlign: 'right' }} name="ellipsis" />
+           </Right>
          </CardItem>
             <CardItem>
               <Body>
@@ -104,13 +99,6 @@ export default class OverviewScreen extends Component {
                   <Text style={styles.buttonText}>Find Your RDA</Text>
                 </Button>
               </Left>
-
-              <Right>
-                <Button iconLeft light>
-                  <Icon style={styles.icon} name='cog' />
-                  <Text style={styles.buttonText}>Settings</Text>
-                </Button>
-              </Right>
             </CardItem>
           </Card>
         </Content>
@@ -129,7 +117,7 @@ const styles = {
     color: '#383838'
   },
   buttonText: {
-    fontSize: 16,
+    fontSize: 14,
     color: '#575757'
   },
   icon: {
