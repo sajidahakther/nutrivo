@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { ScrollView } from 'react-native';
 import { Container, Content, Tab, Tabs, ScrollableTab } from 'native-base';
 import Target from './target.js';
 import Limit from './limit.js';
@@ -16,13 +17,17 @@ export default class NutrientsToMonitor extends Component {
               heading="To Target"
               activeTextStyle={{ color: '#FA2133' }}
             >
-              <Target />
+              <ScrollView>
+                <Target />
+              </ScrollView>
             </Tab>
             <Tab
               heading="To Limit"
               activeTextStyle={{ color: '#FA2133' }}
             >
-              <Limit />
+              <ScrollView>
+                <Limit />
+              </ScrollView>
             </Tab>
           </Tabs>
         </Content>

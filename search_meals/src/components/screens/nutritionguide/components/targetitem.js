@@ -41,7 +41,7 @@ class ListItem extends Component {
   }
 
   render() {
-    const { nutrientName } = styles;
+    const { nutrientName, background } = styles;
     const { id, nutrient } = this.props.library;
 
     return (
@@ -49,7 +49,7 @@ class ListItem extends Component {
         onPress={() => this.props.selectLibrary(id)}
       >
         <View>
-          <CardItem>
+          <CardItem header bordered style={background}>
             <Text style={nutrientName}>
               {nutrient}
             </Text>
@@ -63,20 +63,20 @@ class ListItem extends Component {
 
 const styles = {
   nutrientName: {
-    fontSize: 16,
-    paddingLeft: 12
+    color: '#383838'
   },
   nutrientImage: {
     flex: 1,
     height: 200,
-    paddingLeft: 18,
-    paddingRight: 18
   },
   nutrientDescription: {
     flex: 1,
     paddingLeft: 12,
     paddingRight: 12,
     color: '#707070'
+  },
+  background: {
+    backgroundColor: '#F3F3F3'
   }
 };
 

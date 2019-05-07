@@ -1,13 +1,12 @@
 import React, { Component } from 'react';
 import {
-  Text,
   TouchableWithoutFeedback,
   View,
   LayoutAnimation,
   Image
 } from 'react-native';
+import { CardItem, Body, Text } from 'native-base';
 import { connect } from 'react-redux';
-import { CardSection, SubSection } from './common';
 import * as actions from '../actions';
 
 class ListItem extends Component {
@@ -23,24 +22,26 @@ class ListItem extends Component {
     if (expanded) {
       return (
         <View>
-        <SubSection>
+        <CardItem>
           <Image
             style={nutrientImage}
             source={{ uri: image2 }}
           />
-          </SubSection>
-          <CardSection>
-            <Text style={nutrientDescription}>
-              {library.description2}
-            </Text>
-          </CardSection>
+          </CardItem>
+          <CardItem>
+            <Body>
+              <Text style={nutrientDescription}>
+                {library.description2}
+              </Text>
+            </Body>
+          </CardItem>
         </View>
       );
     }
   }
 
   render() {
-    const { nutrientName } = styles;
+    const { nutrientName, background } = styles;
     const { id, name } = this.props.library;
 
     return (
@@ -48,11 +49,11 @@ class ListItem extends Component {
         onPress={() => this.props.selectLibrary(id)}
       >
         <View>
-          <CardSection>
+          <CardItem header bordered style={background}>
             <Text style={nutrientName}>
               {name}
             </Text>
-          </CardSection>
+          </CardItem>
           {this.renderDescription()}
         </View>
       </TouchableWithoutFeedback>
@@ -62,20 +63,20 @@ class ListItem extends Component {
 
 const styles = {
   nutrientName: {
-    fontSize: 18,
-    paddingLeft: 15
+    color: '#383838'
   },
   nutrientImage: {
     flex: 1,
     height: 200,
-    paddingLeft: 18,
-    paddingRight: 18
   },
   nutrientDescription: {
     flex: 1,
-    textAlign: 'justify',
-    paddingLeft: 18,
-    paddingRight: 18
+    paddingLeft: 12,
+    paddingRight: 12,
+    color: '#707070'
+  },
+  background: {
+    backgroundColor: '#F3F3F3'
   }
 };
 
