@@ -156,7 +156,7 @@ const styles = {
     color: '#7E7E7E',
   },
   subheaderText: {
-    color: '#FA2133'
+    color: '#383838'
   },
 };
 
