@@ -7,6 +7,7 @@ const GuideScreen = () => {
   const { colStyle, container, optionTitles, image, rowStyle } = styles;
   return (
     <Container style={container}>
+    <Content>
 
     <CardItem cardBody>
        <Image
@@ -14,7 +15,6 @@ const GuideScreen = () => {
         style={image}
        />
      </CardItem>
-
       <Grid>
        <Row style={rowStyle}>
          <Card>
@@ -38,7 +38,7 @@ const GuideScreen = () => {
          </Card>
        </Row>
        </Grid>
-       
+
        <Grid>
        <Row style={rowStyle}>
          <Card>
@@ -62,6 +62,7 @@ const GuideScreen = () => {
             </Card>
           </Row>
         </Grid>
+
         <Grid>
            <Col style={colStyle}>
              <Card>
@@ -83,7 +84,6 @@ const GuideScreen = () => {
               </CardItem>
             </Card>
           </Col>
-
           <Col style={colStyle}>
             <Card>
               <CardItem header bordered>
@@ -104,7 +104,8 @@ const GuideScreen = () => {
                </CardItem>
              </Card>
            </Col>
-       </Grid>
+        </Grid>
+        </Content>
     </Container>
   );
 };
@@ -121,12 +122,13 @@ const styles = {
   },
   colStyle: {
     backgroundColor: '#F4F4F4',
-    height: 200
+    height: 200,
+    width: null,
   },
   rowStyle: {
     backgroundColor: '#F4F4F4',
-    // height: 200
     width: 400,
+    height: 200
   },
   image: {
     height: 200,
