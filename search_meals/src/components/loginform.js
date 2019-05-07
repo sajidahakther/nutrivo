@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, ImageBackground } from 'react-native';
+import { View, ImageBackground } from 'react-native';
+import { Text } from 'native-base';
 import { connect } from 'react-redux';
 import { emailChanged, passwordChanged, loginUser } from '../actions';
 import { SubSection, Input, Button, Spinner, FormSection, FormCard } from './common';
 
 // backgroung image is free to use and originally from unsplash: https://unsplash.com/photos/nTZOILVZuOg, edited by me.
-const nutrivobg = require('./assets/mainbg.png');
+const nutrivobg = require('./assets/mainbg2.png');
 
 // redux will be in charge of the value of the email and pass
 class LoginForm extends Component {
@@ -53,9 +54,7 @@ class LoginForm extends Component {
         source={nutrivobg}
         style={{ width: '100%', height: '100%' }}
       >
-      <View
-        style={{ paddingTop: 660 }}
-      >
+      <View style={styles.container}>
         <FormCard>
           <FormSection>
             <Input
@@ -97,6 +96,9 @@ const styles = {
     fontSize: 20,
     alignSelf: 'center',
     color: '#FA2133'
+  },
+  container: {
+    paddingTop: 590
   }
 };
 

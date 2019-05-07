@@ -20,7 +20,8 @@ import { Actions } from 'react-native-router-flux';
 import { entriesFetch } from '../../actions';
 import EntryListItem from './entries/entrylistitem';
 import ScanLabel from './entries/scanlabel';
-import SmartFoodSuggestions from './entries/smartfoods.js';
+// import SmartFoodSuggestions from './entries/smartfoods.js';
+import FoodSwiper from './nutritionguide/smartfoods/foodswiper';
 
 class EntriesScreen extends Component {
   componentWillMount() {
@@ -119,7 +120,10 @@ class EntriesScreen extends Component {
               <Text style={styles.instructions}>Tap on a food to edit entry</Text>
             </CardItem>
           </Card>
-          <SmartFoodSuggestions />
+          <CardItem header bordered>
+           <Text style={styles.subheaderText}>Smart Food Suggestions</Text>
+          </CardItem>
+          <FoodSwiper />
         </Content>
       </Container>
     );
@@ -151,8 +155,8 @@ const styles = {
     fontStyle: 'italic',
     color: '#7E7E7E',
   },
-  textColour: {
-    color: '#383838'
+  subheaderText: {
+    color: '#FA2133'
   },
 };
 

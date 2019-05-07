@@ -11,7 +11,6 @@ const FormCard = (props) => {
 
 const styles = {
   containerStyle: {
-    
     marginLeft: 20,
     marginRight: 20,
   }

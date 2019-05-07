@@ -21,6 +21,7 @@ import EditEntry from './components/screens/entries/editentry';
 import Macros from './components/screens/nutritionguide/macros';
 import NutrientsToMonitor from './components/screens/nutritionguide/nutrientstomonitor';
 import PortionSizes from './components/screens/nutritionguide/portionsizes';
+import SmartFoods from './components/screens/nutritionguide/smartfoods';
 
 const TabIcon = ({ focused, iconName }) => {
   return (
@@ -44,7 +45,6 @@ const RouterComponent = () => {
           <Scene
             key="login"
             component={LoginForm}
-            // component={OverviewScreen}
             title="Login"
             hideNavBar
             initial
@@ -87,11 +87,18 @@ const RouterComponent = () => {
                   title="Nutrients"
                 />
 
-                {/* Smart Food Suggestions */}
+                {/* OLD Smart Food Suggestions
                 <Scene
                   key="searchscreen"
                   component={SearchScreen}
                   title="Search"
+                />*/}
+
+                {/* Smart Food Suggestions */}
+                <Scene
+                  key="smartfoods"
+                  component={SmartFoods}
+                  title="Smart Food Suggestions"
                 />
 
                 {/* Portion Sizes */}

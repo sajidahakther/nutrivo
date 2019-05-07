@@ -69,7 +69,7 @@ const GuideScreen = () => {
                <CardItem header bordered>
                  <Text
                   style={optionTitles}
-                  onPress={() => Actions.searchscreen()}
+                  onPress={() => Actions.smartfoods()}
                  >
                   Smart Foods
                 </Text>

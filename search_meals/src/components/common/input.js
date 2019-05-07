@@ -23,7 +23,6 @@ const Input = ({ label, value, onChangeText, placeholder, secureTextEntry }) => 
 const styles = {
   inputStyle: {
     color: '#7E7E7E',
-    // fontWeight: 'bold',
     paddingRight: 15,
     paddingLeft: 15,
     fontSize: 16,

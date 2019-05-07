@@ -14,8 +14,8 @@ const MealDetail = ({ meal1 }) => {
                style={{ height: 200, width: null, flex: 1 }}
              />
            </CardItem>
-           <CardItem>
-            <Text style={mealTitle}>{title}</Text>
+           <CardItem header bordered>
+             <Text style={mealTitle}>{title}</Text>
            </CardItem>
            <CardItem>
             <Body>
@@ -54,9 +54,7 @@ const MealDetail = ({ meal1 }) => {
 
 const styles = {
   mealTitle: {
-    fontWeight: 'bold',
-    color: '#383838', // dark grey
-    fontSize: 17,
+    color: '#383838',
   },
   mealDescription: {
     color: '#707070',
