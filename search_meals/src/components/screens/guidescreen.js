@@ -4,6 +4,8 @@ import { Container, Content, Text, Grid, Col, Card, CardItem, Body, Right } from
 import { IconFill } from '@ant-design/icons-react-native';
 import { Actions } from 'react-native-router-flux';
 
+//credit for image: http://crossfitpyro.com/wp-content/uploads/2019/01/HealthyFood.jpg
+
 const GuideScreen = () => {
   const { colStyle, container, optionTitles, image } = styles;
   return (
@@ -11,7 +13,7 @@ const GuideScreen = () => {
     <Content>
     <CardItem cardBody>
        <Image
-        source={{ uri: 'http://crossfitpyro.com/wp-content/uploads/2019/01/HealthyFood.jpg' }}
+        source={require('../assets/guideheader.jpg')}
         style={image}
        />
      </CardItem>

@@ -177,7 +177,7 @@ const RouterComponent = () => {
                   component={ProfileScreen}
                   title="Profile"
                   onRight={() => Actions.auth()}
-                  rightTitle="Sign Out"
+                  rightTitle="Log Out"
                 />
               </Scene>
             </Scene>

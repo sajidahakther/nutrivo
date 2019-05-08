@@ -51,6 +51,11 @@ export default class FoodSwiper extends Component {
                 </CardItem>
                 <CardItem>
                   <Body>
+                    <Text style={styles.instructions}>Swipe left or right to view more</Text>
+                  </Body>
+                </CardItem>
+                <CardItem>
+                  <Body>
                     <Text style={styles.mealDescription}>{item.description}</Text>
                   </Body>
                 </CardItem>
@@ -96,5 +101,9 @@ const styles = {
     fontSize: 24,
     textAlign: 'left',
     color: '#1CD200'
-  }
+  },
+  instructions: {
+      fontStyle: 'italic',
+      color: '#7E7E7E',
+    }
 };

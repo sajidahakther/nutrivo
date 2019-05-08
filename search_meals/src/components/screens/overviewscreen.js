@@ -46,7 +46,7 @@ export default class OverviewScreen extends Component {
             <CardItem>
               <Body>
                 <Image
-                  source={{ uri: 'https://trello-attachments.s3.amazonaws.com/5c4f75445887e652c03eec1e/5cd28e85ae4c991fed8002e6/14a6813abab6f3570af0d098093cfb2d/calories.png' }}
+                  source={require('../assets/calories.png')}
                   style={styles.image}
                 />
               </Body>
@@ -74,7 +74,7 @@ export default class OverviewScreen extends Component {
             <CardItem>
               <Body>
                 <Image
-                  source={{ uri: 'https://trello-attachments.s3.amazonaws.com/5c4f75445887e652c03eec1e/5cd28e85ae4c991fed8002e6/56ca00e8847df4aa0407fbf01ca74b60/macros.png' }}
+                  source={require('../assets/macros.png')}
                   style={styles.image}
                 />
               </Body>
@@ -102,7 +102,7 @@ export default class OverviewScreen extends Component {
             <CardItem>
               <Body>
                 <Image
-                  source={{ uri: 'https://trello-attachments.s3.amazonaws.com/5c4f75445887e652c03eec1e/5cd28e85ae4c991fed8002e6/ce8a70e150afaf2ec3331d4195d9c8da/nutrients.png' }}
+                  source={require('../assets/nutrients.png')}
                   style={styles.image}
                 />
               </Body>
