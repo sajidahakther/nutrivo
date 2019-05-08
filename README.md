@@ -1,4 +1,4 @@
-<img src="https://trello-attachments.s3.amazonaws.com/5c82625330e45541dbf27260/1024x490/72113a6af7880fdd046a7854cb990419/nutrivo.png" width="100%">
+<img src="https://trello-attachments.s3.amazonaws.com/5c82625330e45541dbf27260/1024x490/67ec3b475a64f121cedf53b866fadece/banner.png" width="100%">
 
 ## About Nutrivo
 A health monitoring app that assists with reaching the recommended dietary intake (RDI). 
@@ -24,11 +24,7 @@ Built with React Native, Redux, Firebase.
 - Alternatively, build and run the iOS app, by running `npm run ios` from the root of the project. 
 - The first build will take some time, but on a successful build it will launch the simulator.
 
-If all has gone well you'll see an initial screen like the one below.
-
-## Screenshots
-
-<img src="https://trello-attachments.s3.amazonaws.com/5cb1a4d1b9cfc93bc4f0ba3f/766x1410/a162f989b8a9d74e9b33e0e932116bb7/Screenshot_2019-04-13_at_10.01.40.png">
+If all has gone well you'll see an initial screen like the one above.
 
 ## Personal Use
 ### Using ESLint for Debugging
