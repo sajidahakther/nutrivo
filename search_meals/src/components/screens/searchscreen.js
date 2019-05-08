@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Item, Icon, Input, Container, Content, Card, CardItem } from 'native-base';
-import SearchBody from './search/searchbody';
+import SearchedMealList from './search/searchedmeallist';
 import DefaultMealList from './search/defaultmeallist';
 
 class SearchScreen extends Component {
@@ -34,7 +34,7 @@ class SearchScreen extends Component {
       );
     }
       return (
-        <SearchBody data={this.state.data} />
+        <SearchedMealList data={this.state.data} />
       );
   }
 
