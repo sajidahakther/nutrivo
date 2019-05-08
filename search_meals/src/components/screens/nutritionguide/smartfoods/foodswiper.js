@@ -17,19 +17,19 @@ const cards = [
   {
     text: 'Avocado',
     description: 'Avocado is a superfood containing many nutrients and antioxidants, such as folic acid, Omega 3, magnesium, potassium, lutein and fibre.',
-    image: require('../../../assets/avocado.jpg'),
+    image: require('../../../assets/avocado.jpeg'),
     tag: 'high nutrient density'
   },
   {
     text: 'Salmon',
     description: 'Salmon is packed with omega-3 fatty acids, potassium, selenium and vitamin B12 which are linked to improved brain function and cognition',
-    image: require('../../../assets/salmon.jpg'),
+    image: require('../../../assets/salmon.jpeg'),
     tag: 'high-quality protein'
   },
   {
     text: 'Beans and Legumes',
     description: 'Excellent sources of dietary fiber, protein, B vitamins and others. Can help maintain a healthy gut, reduce blood sugar and improve cholesterol levels.',
-    image: require('../../../assets/beans.jpg'),
+    image: require('../../../assets/beans.jpeg'),
     tag: 'fibre-rich foods'
   },
 ];

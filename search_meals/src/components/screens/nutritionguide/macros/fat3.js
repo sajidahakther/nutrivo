@@ -54,8 +54,11 @@ export default class Tab3 extends Component {
            <Text style={styles.headerColour}>The Different Types</Text>
           </CardItem>
           <CardItem cardBody>
-             <Image source={{ uri: 'https://cdn1.medicalnewstoday.com/content/images/articles/322/322295/healthy-high-fat-foods.jpg' }} style={{ height: 200, width: null, flex: 1 }} />
-           </CardItem>
+            <Image
+              source={require('../../../assets/fats.jpeg')}
+              style={{ height: 200, width: null, flex: 1 }}
+            />
+          </CardItem>
           <Accordion
             dataArray={dataArray}
             renderContent={this._renderContent}

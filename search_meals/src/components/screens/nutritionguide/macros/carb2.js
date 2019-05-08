@@ -55,7 +55,10 @@ export default class Tab2 extends Component {
            <Text style={styles.headerColour}>Most Common Forms</Text>
           </CardItem>
           <CardItem cardBody>
-             <Image source={{ uri: 'https://cdn1.medicalnewstoday.com/content/images/articles/320/320959/foods-rich-in-carbohydrates.jpg' }} style={{ height: 200, width: null, flex: 1 }} />
+             <Image
+               source={require('../../../assets/carb.jpeg')}
+               style={{ height: 200, width: null, flex: 1 }}
+             />
            </CardItem>
           <Accordion
             dataArray={dataArray}
