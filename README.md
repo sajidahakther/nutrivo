@@ -1,8 +1,7 @@
 <img src="https://trello-attachments.s3.amazonaws.com/5c82625330e45541dbf27260/1024x490/67ec3b475a64f121cedf53b866fadece/banner.png" width="100%">
 
 ## About Nutrivo
-A health monitoring app that assists with reaching the recommended dietary intake (RDI). 
-Aim is to scan food labels using the mobile phone camera and it will utilise Cloud Vision API to detect and analyse text for automated data collection.
+A health application that assists with improving your dietary intake. Provides simple nutrition guides to help you select healthier food options. Search and discover recipes that meet your dietary requirements. Monitor your calories/nutrition to reach your goals, and view your progress. Initial aim was to automate dietary data collection - by capturing an image of a food label, then using Cloud Vision API to detect the text on that label, and storing those results. 
 
 Built with React Native, Redux, Firebase. 
 
@@ -11,9 +10,9 @@ Built with React Native, Redux, Firebase.
  - [x] Signing in or creating an account
  - [x] Ability to log, save, edit and delete meals
  - [x] Access to nutritional guide 
- - [x] View recipes/meals
- - [x] Search recipes/meals
- - [x] Access camera library to store image (nutrition label)
+ - [x] View meals and food suggestions
+ - [x] Search healthy recipes
+ - [x] Access camera library to store image (of nutrition label)
  - [ ] Text recognition on nutrition labels
 
 ## Build Instructions
