@@ -70,7 +70,6 @@ class EntriesScreen extends Component {
         </Card>
         <Content>
           <Card>
-            <CardItem>
               <Tabs
                 renderTabBar={() => <ScrollableTab />}
                 tabBarUnderlineStyle={{ backgroundColor: '#FA2133' }}
@@ -116,8 +115,7 @@ class EntriesScreen extends Component {
                   />
                 </Tab>
               </Tabs>
-            </CardItem>
-            <CardItem>
+            <CardItem padder>
               <Text style={styles.instructions}>Tap on a food to edit entry</Text>
             </CardItem>
           </Card>

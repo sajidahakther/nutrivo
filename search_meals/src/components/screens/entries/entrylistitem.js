@@ -41,10 +41,12 @@ class EntryListItem extends Component {
 const styles = {
   food: {
     color: '#383838',
+    paddingLeft: 15
   },
   serving: {
     textAlign: 'right',
     color: '#7E7E7E',
+    paddingRight: 15
   }
 };
 
