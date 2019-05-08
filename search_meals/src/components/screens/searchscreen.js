@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Header, Item, Icon, Input, Container, Content } from 'native-base';
+import { Item, Icon, Input, Container, Content, Card, CardItem } from 'native-base';
 import SearchBody from './search/searchbody';
 import DefaultMealList from './search/defaultmeallist';
 
@@ -30,7 +30,6 @@ class SearchScreen extends Component {
   renderBody = () => {
     if (this.state.onCall) {
       return (
-        // <MealLoader />
         <DefaultMealList />
       );
     }
@@ -41,23 +40,24 @@ class SearchScreen extends Component {
 
   render() {
     return (
-      // <ScrollView>
       <Container style={styles.container}>
-        <Content>
-          <Header
+        <Card>
+          <CardItem
             searchBar
             rounded
           >
-          <Item>
-            <Input
-              style={{ paddingLeft: 15 }}
-              value={this.state.searchMeals}
-              placeholder="Search meals"
-              onChangeText={(searchMeals) => this.setState({ searchMeals })}
-            />
-            <Icon style={styles.searchicon} name="search" onPress={this.searchMeals} />
-          </Item>
-          </Header>
+        <Item>
+          <Input
+            style={{ paddingLeft: 15 }}
+            value={this.state.searchMeals}
+            placeholder="Search Meals"
+            onChangeText={(searchMeals) => this.setState({ searchMeals })}
+          />
+          <Icon style={styles.searchicon} name="search" onPress={this.searchMeals} />
+        </Item>
+        </CardItem>
+      </Card>
+        <Content>
           {this.renderBody()}
         </Content>
       </Container>
@@ -72,7 +72,8 @@ const styles = {
   },
   searchicon: {
     fontWeight: 'bold',
-    color: '#383838', // dark grey
+    color: '#FA2133',
+    fontSize: 20
   }
 };
 

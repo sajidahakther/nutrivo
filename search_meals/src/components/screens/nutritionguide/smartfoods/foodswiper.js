@@ -8,24 +8,29 @@ import {
   CardItem,
   Text,
   Body,
-  Icon
+  Left,
+  Button,
 } from 'native-base';
+import { IconFill } from '@ant-design/icons-react-native';
 
 const cards = [
   {
-    text: 'Suggestion 1',
-    name: 'One',
-    image: require('../../../assets/mainbg2.png'),
+    text: 'Avocado',
+    description: 'Avocado is a superfood containing many nutrients and antioxidants, such as folic acid, Omega 3, magnesium, potassium, lutein and fibre.',
+    image: require('../../../assets/avocado.jpg'),
+    tag: 'high nutrient density'
   },
   {
-    text: 'Suggestion 2',
-    name: 'Two',
-    image: require('../../../assets/mainbg2.png'),
+    text: 'Salmon',
+    description: 'Salmon is packed with omega-3 fatty acids, potassium, selenium and vitamin B12 which are linked to improved brain function and cognition',
+    image: require('../../../assets/salmon.jpg'),
+    tag: 'high-quality protein'
   },
   {
-    text: 'Suggestion 3',
-    name: 'Three',
-    image: require('../../../assets/mainbg2.png'),
+    text: 'Beans and Legumes',
+    description: 'Excellent sources of dietary fiber, protein, B vitamins and others. Can help maintain a healthy gut, reduce blood sugar and improve cholesterol levels.',
+    image: require('../../../assets/beans.jpg'),
+    tag: 'fibre-rich foods'
   },
 ];
 
@@ -44,13 +49,21 @@ export default class FoodSwiper extends Component {
                 <CardItem header bordered>
                   <Text style={styles.foodName}>{item.text}</Text>
                 </CardItem>
-                <Body>
-                  <Text>High Nutrient Density</Text>
-                </Body>
                 <CardItem>
-                  <Icon name="heart" style={styles.icon} />
-                  <Text>{item.name}</Text>
+                  <Body>
+                    <Text style={styles.mealDescription}>{item.description}</Text>
+                  </Body>
                 </CardItem>
+                <CardItem>
+                  <Left>
+                   <IconFill style={styles.checkIcon} name="check-circle" />
+                  </Left>
+                    <Body>
+                     <Button rounded light>
+                       <Text style={styles.tagText}>{item.tag}</Text>
+                     </Button>
+                   </Body>
+               </CardItem>
               </Card>
             }
           />
@@ -71,5 +84,17 @@ const styles = {
   foodImage: {
     height: 300,
     flex: 1
+  },
+  mealDescription: {
+    color: '#707070'
+  },
+  tagText: {
+    fontSize: 14,
+    color: '#575757'
+  },
+  checkIcon: {
+    fontSize: 24,
+    textAlign: 'left',
+    color: '#1CD200'
   }
 };

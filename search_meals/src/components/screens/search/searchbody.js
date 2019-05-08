@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { ScrollView, Text, View } from 'react-native';
+import { ScrollView, View } from 'react-native';
+import DefaultMealList from './defaultmeallist';
 
 class SearchBody extends Component {
   render() {
@@ -12,18 +13,12 @@ class SearchBody extends Component {
     console.log(recipe.name);
     return (
       <ScrollView style={{ flex: 1 }}>
-        <Text style={styles.header}> #{recipe.id} - {recipe.name}</Text>
+        <DefaultMealList />
       </ScrollView>
     );
   }
 }
-
-const styles = {
-  header: {
-    fontSize: 30,
-    color: 'red',
-    textAlign: 'center'
-  }
-};
+// Return the following
+// <Text style={styles.header}> #{recipe.id} - {recipe.name}</Text>
 
 export default SearchBody;

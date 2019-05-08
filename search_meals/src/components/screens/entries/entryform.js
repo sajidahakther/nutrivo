@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Picker, ScrollView } from 'react-native';
-import { Card, CardItem, Text } from 'native-base';
+import { Card, CardItem, Text, Icon, Item } from 'native-base';
 import { connect } from 'react-redux';
 import { entryupdate } from '../../../actions';
 import { Input } from '../../common';
@@ -25,11 +25,17 @@ class EntryForm extends Component {
         </Card>
 
         <Card style={{ flexDirection: 'column' }}>
-          <CardItem header bordered>
-           <Text style={styles.textColour}>Search Food</Text>
-          </CardItem>
-          <CardItem>
-            <Text> Add search bar here </Text>
+            <CardItem
+              searchBar
+              rounded
+            >
+          <Item>
+            <Input
+              style={{ paddingLeft: 15 }}
+              placeholder="Search Food"
+            />
+            <Icon style={styles.searchicon} name="search" />
+          </Item>
           </CardItem>
         </Card>
 
@@ -60,8 +66,14 @@ class EntryForm extends Component {
 const styles = {
   textColour: {
     color: '#383838'
+  },
+  searchicon: {
+    fontWeight: 'bold',
+    color: '#FA2133',
+    fontSize: 20,
   }
 };
+
 
 const mapStateToProps = (state) => {
   const { food, serving, duration } = state.entry;

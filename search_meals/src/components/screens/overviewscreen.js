@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import {
   Image,
-  Linking
+  Linking,
+  View
 } from 'react-native';
 import {
   Container,
@@ -16,10 +17,24 @@ import {
 } from 'native-base';
 import { IconOutline, IconFill } from '@ant-design/icons-react-native';
 
+
 export default class OverviewScreen extends Component {
   render() {
     return (
       <Container style={styles.background}>
+        <Card>
+          <CardItem header bordered>
+            <Left>
+              <IconOutline style={{ fontSize: 24, textAlign: 'left', color: '#FA2133' }} name="left" />
+            </Left>
+            <View style={{ paddingRight: 5 }}>
+              <Text style={styles.dateHeader}> Today </Text>
+            </View>
+            <Right>
+              <IconOutline style={{ fontSize: 24, textAlign: 'right', color: '#FA2133' }} name="right" />
+            </Right>
+          </CardItem>
+        </Card>
         <Content>
           <Card style={{ flex: 0 }}>
           <CardItem header bordered>
@@ -31,7 +46,7 @@ export default class OverviewScreen extends Component {
             <CardItem>
               <Body>
                 <Image
-                  source={{ uri: 'https://trello-attachments.s3.amazonaws.com/5c4f75445887e652c03eec1e/5ccf5d51ec12ec8d47577975/fed8527b7a49f10ecd676d6f9b0dcda5/dnk.png' }}
+                  source={{ uri: 'https://trello-attachments.s3.amazonaws.com/5c4f75445887e652c03eec1e/5cd28e85ae4c991fed8002e6/14a6813abab6f3570af0d098093cfb2d/calories.png' }}
                   style={styles.image}
                 />
               </Body>
@@ -59,7 +74,7 @@ export default class OverviewScreen extends Component {
             <CardItem>
               <Body>
                 <Image
-                  source={{ uri: 'https://trello-attachments.s3.amazonaws.com/5c4f75445887e652c03eec1e/5ccf5d51ec12ec8d47577975/6b55503a558aba1d94b2bb119702f511/bdj.png' }}
+                  source={{ uri: 'https://trello-attachments.s3.amazonaws.com/5c4f75445887e652c03eec1e/5cd28e85ae4c991fed8002e6/56ca00e8847df4aa0407fbf01ca74b60/macros.png' }}
                   style={styles.image}
                 />
               </Body>
@@ -87,7 +102,7 @@ export default class OverviewScreen extends Component {
             <CardItem>
               <Body>
                 <Image
-                  source={{ uri: 'https://trello-attachments.s3.amazonaws.com/5c4f75445887e652c03eec1e/5ccf5d51ec12ec8d47577975/4cedba4de311be2d10a23871d1b5ce9f/jsanj.png' }}
+                  source={{ uri: 'https://trello-attachments.s3.amazonaws.com/5c4f75445887e652c03eec1e/5cd28e85ae4c991fed8002e6/ce8a70e150afaf2ec3331d4195d9c8da/nutrients.png' }}
                   style={styles.image}
                 />
               </Body>
@@ -131,7 +146,13 @@ const styles = {
     backgroundColor: '#E8E8E8'
   },
   questionIcon: {
-    fontSize: 18,
-    color: '#707070'
+    fontSize: 16,
+    color: '#707070',
+    textAlign: 'right'
+  },
+  dateHeader: {
+    fontSize: 16,
+    paddingRight: 5,
+    color: '#383838',
   }
 };

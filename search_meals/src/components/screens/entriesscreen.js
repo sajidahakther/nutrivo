@@ -49,26 +49,26 @@ class EntriesScreen extends Component {
     console.log(this.props);
     return (
       <Container style={styles.container}>
-        <Content>
-          <Card>
-            <CardItem>
-              <Left>
-              <ScanLabel />
-              </Left>
+        <Card>
+          <CardItem>
+            <Left>
+            <ScanLabel />
+            </Left>
 
-              <Right>
-                <Button
-                  light
-                  onPress={() => Actions.addentry()}
-                >
-                  <IconFill
-                    style={styles.icon} name="plus-circle"
-                  />
-                  <Text style={styles.buttonText}>Enter Meal</Text>
-                </Button>
-              </Right>
-            </CardItem>
-          </Card>
+            <Right>
+              <Button
+                light
+                onPress={() => Actions.addentry()}
+              >
+                <IconFill
+                  style={styles.icon} name="plus-circle"
+                />
+                <Text style={styles.buttonText}>Enter Meal</Text>
+              </Button>
+            </Right>
+          </CardItem>
+        </Card>
+        <Content>
           <Card>
             <CardItem>
               <Tabs
@@ -150,7 +150,8 @@ const styles = {
     color: '#383838'
   },
   icon: {
-    fontSize: 18
+    fontSize: 18,
+    paddingLeft: 15
   },
   instructions: {
     fontStyle: 'italic',
