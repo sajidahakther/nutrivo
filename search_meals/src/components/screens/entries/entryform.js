@@ -1,28 +1,50 @@
 import React, { Component } from 'react';
-import { Picker, ScrollView } from 'react-native';
-import { Card, CardItem, Text, Icon, Item } from 'native-base';
+import { ScrollView } from 'react-native';
+import { Card, CardItem, Text, Icon, Item, Form, Picker } from 'native-base';
 import { connect } from 'react-redux';
 import { entryupdate } from '../../../actions';
 import { Input } from '../../common';
 
 class EntryForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      selected2: undefined
+    };
+  }
+  onValueChange2(value: string) {
+    this.setState({
+      selected2: value
+    });
+  }
   render() {
     return (
       <ScrollView style={styles.container}>
-        <Card style={{ flexDirection: 'column' }}>
-          <CardItem header bordered>
-           <Text style={styles.textColour}>Select a Meal</Text>
-          </CardItem>
-          <Picker
-            selectedValue={this.props.duration}
-            onValueChange={value => this.props.entryupdate({ prop: 'duration', value })}
-          >
-            <Picker.Item label="Breakfast" value="Breakfast" />
-            <Picker.Item label="Lunch" value="Lunch" />
-            <Picker.Item label="Snack" value="Snack" />
-            <Picker.Item label="Dinner" value="Dinner" />
-          </Picker>
-        </Card>
+
+      <Card>
+      <CardItem header bordered>
+       <Text style={styles.textColour}>Select a Meal</Text>
+      </CardItem>
+      <Form>
+          <Item picker>
+            <Picker
+              mode="dropdown"
+              iosIcon={<Icon name="arrow-down" />}
+              style={{ width: undefined }}
+              placeholder="Select a Meal"
+              placeholderStyle={{ color: '#bfc6ea' }}
+              placeholderIconColor='#007aff'
+              selectedValue={this.props.duration}
+              onValueChange={value => this.props.entryupdate({ prop: 'duration', value })}
+            >
+              <Picker.Item label="Breakfast" value="Breakfast" />
+              <Picker.Item label="Lunch" value="Lunch" />
+              <Picker.Item label="Dinner" value="Snack" />
+              <Picker.Item label="Snack" value="Dinner" />
+            </Picker>
+          </Item>
+        </Form>
+      </Card>
 
         <Card style={{ flexDirection: 'column' }}>
             <CardItem
