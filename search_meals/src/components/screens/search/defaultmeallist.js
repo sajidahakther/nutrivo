@@ -14,7 +14,7 @@ class DefaultMealList extends Component {
   }
 
   componentWillMount() {
-    axios.get('https://api.myjson.com/bins/1gj9mk')
+    axios.get('https://api.myjson.com/bins/n1wom')
       .then(response => this.setState({ meals: response.data }));
   }
 
