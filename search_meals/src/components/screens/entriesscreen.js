@@ -19,10 +19,15 @@ import { IconFill } from '@ant-design/icons-react-native';
 import { Actions } from 'react-native-router-flux';
 import { entriesFetch } from '../../actions';
 import EntryListItem from './entries/entrylistitem';
-import ScanLabel from './entries/scanlabel';
 import FoodSwiper from './nutritionguide/smartfoods/foodswiper';
 
 class EntriesScreen extends Component {
+  state = {
+    image: {
+      value: null,
+      valid: false
+    }
+  }
   componentWillMount() {
     this.props.entriesFetch(); // loads up list of entries
     this.createDataSource(this.props);
@@ -52,7 +57,15 @@ class EntriesScreen extends Component {
         <Card>
           <CardItem>
             <Left>
-            <ScanLabel />
+            <Button
+              light
+              onPress={() => Actions.scanlabel()}
+            >
+              <IconFill
+                style={styles.icon} name="camera"
+              />
+              <Text style={styles.buttonText}>Scan Label</Text>
+            </Button>
             </Left>
 
             <Right>
@@ -127,6 +140,7 @@ class EntriesScreen extends Component {
       </Container>
     );
   }
+
 }
 
 /* state.entries is an object that has many key value pairs

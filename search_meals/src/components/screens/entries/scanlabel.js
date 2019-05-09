@@ -1,45 +1,67 @@
 import React, { Component } from 'react';
-import { Root, Button, ActionSheet, Text, Icon } from 'native-base';
+import { View, Image, Button } from 'react-native';
+import { Container, Content, Card, CardItem } from 'native-base';
+import ImagePicker from 'react-native-image-picker';
 
-const BUTTONS = ['Take a Photo', 'Select from Camera roll', 'Cancel'];
-const CANCEL_INDEX = 2;
-
-export default class ScanLabel extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+class ScanLabel extends Component {
+  state = {
+    pickedImaged: null
   }
+
+  pickImageHandler = () => {
+    ImagePicker.showImagePicker({ title: 'Pick an Image' }, res => {
+      if (res.didCancel) {
+        console.log('User cancelled!');
+      } else if (res.error) {
+        console.log('Error', res.error);
+      } else {
+        this.setState({
+          pickedImaged: { uri: res.uri }
+        });
+      }
+    });
+  }
+
   render() {
     return (
-      <Root>
-          <Button
-            light
-            onPress={() =>
-            ActionSheet.show(
-              {
-                options: BUTTONS,
-                cancelButtonIndex: CANCEL_INDEX,
-                title: 'Scan Food Label'
-              },
-              buttonIndex => {
-                this.setState({ clicked: BUTTONS[buttonIndex] });
-              }
-            )}
-          >
-            <Icon style={styles.icon} name="camera" />
-            <Text style={styles.buttonText}>Scan Label</Text>
-          </Button>
-        </Root>
+      <Container style={styles.container}>
+        <Content>
+          <Card style={styles.adjust}>
+            <CardItem>
+              <View style={styles.placeholder}>
+                <Image source={this.state.pickedImaged} style={styles.previewImage} />
+              </View>
+            </CardItem>
+            <CardItem>
+              <Button title="Select An Image" onPress={this.pickImageHandler} color='#FA2133' />
+            </CardItem>
+          </Card>
+        </Content>
+      </Container>
     );
   }
 }
 
 const styles = {
-  buttonText: {
-    fontSize: 16,
-    color: '#383838'
-  },
-  icon: {
-    fontSize: 22
-  }
+    container: {
+      backgroundColor: '#E8E8E8'
+    },
+    adjust: {
+        width: '100%',
+        alignItems: 'center'
+    },
+    placeholder: {
+      marginTop: 25,
+      borderWidth: 1,
+      borderColor: '#f5f5f5',
+      backgroundColor: '#f1f1f1',
+      width: '90%',
+      height: 250
+    },
+    previewImage: {
+        width: '100%',
+        height: '100%'
+    }
 };
+
+export default ScanLabel;

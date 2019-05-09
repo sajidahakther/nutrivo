@@ -16,6 +16,7 @@ import ProfileScreen from './components/screens/profilescreen';
 //Entries
 import AddEntry from './components/screens/entries/addentry';
 import EditEntry from './components/screens/entries/editentry';
+import ScanLabel from './components/screens/entries/scanlabel';
 
 //Nutrition Guide
 import Macros from './components/screens/nutritionguide/macros';
@@ -149,7 +150,16 @@ const RouterComponent = () => {
                   component={EditEntry}
                   title="Edit Entry"
                 />
+
+                {/* form to add image */}
+                <Scene
+                  key="scanlabel"
+                  component={ScanLabel}
+                  title="Scan Nutrition Label"
+                />
               </Scene>
+
+
 
               {/* OVERVIEW SCREEN */}
               <Scene
