@@ -96,7 +96,6 @@ const styles = {
   }
 };
 
-
 const mapStateToProps = (state) => {
   const { food, serving, duration } = state.entry;
   return { food, serving, duration };

@@ -22,10 +22,6 @@ export const passwordChanged = (text) => {
   };
 };
 
-/* Using redux thunk with firebase to handle asynchronous actions. By using redux thunk,
-I expand the range of values that can be returned from an action creator - particularly
-the function (dispatch) which will be automatically called by redux thunk and will manually
-send an action off to all the reducers in the app (by using this i can do async actions) */
 export const loginUser = ({ email, password }) => {
   return (dispatch) => {
     dispatch({ type: LOGIN_USER_START });

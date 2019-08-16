@@ -2,7 +2,6 @@ import React from 'react';
 import { ScrollView, Image, Linking } from 'react-native';
 import { Card, CardItem, Text, Body, Button, Icon, Left, Right } from 'native-base';
 import { IconFill } from '@ant-design/icons-react-native';
-// import DefaultMealList from './defaultmeallist';
 
 const SearchBody = ({ meal1 }) => {
   const { title, description, thumbnailimage, tags, url, time } = meal1;

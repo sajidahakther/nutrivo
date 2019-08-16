@@ -29,11 +29,10 @@ class EntriesScreen extends Component {
     }
   }
   componentWillMount() {
-    this.props.entriesFetch(); // loads up list of entries
+    this.props.entriesFetch(); 
     this.createDataSource(this.props);
     }
 
-  // nextProps is the next set of props that the component is rendered with
   componentWillReceiveProps(nextProps) {
     this.createDataSource(nextProps);
   }
@@ -94,7 +93,7 @@ class EntriesScreen extends Component {
                   <ListView
                     enableEmptySections
                     dataSource={this.dataSource}
-                    renderRow={this.renderRow} // renders all the entry items in a row
+                    renderRow={this.renderRow} 
                   />
                 </Tab>
                 <Tab
@@ -104,7 +103,7 @@ class EntriesScreen extends Component {
                   <ListView
                     enableEmptySections
                     dataSource={this.dataSource}
-                    renderRow={this.renderRow} // renders all the entry items in a row
+                    renderRow={this.renderRow} 
                   />
                 </Tab>
                 <Tab
@@ -114,7 +113,7 @@ class EntriesScreen extends Component {
                   <ListView
                     enableEmptySections
                     dataSource={this.dataSource}
-                    renderRow={this.renderRow} // renders all the entry items in a row
+                    renderRow={this.renderRow} 
                   />
                 </Tab>
                 <Tab
@@ -124,7 +123,7 @@ class EntriesScreen extends Component {
                   <ListView
                     enableEmptySections
                     dataSource={this.dataSource}
-                    renderRow={this.renderRow} // renders all the entry items in a row
+                    renderRow={this.renderRow} 
                   />
                 </Tab>
               </Tabs>
@@ -140,12 +139,8 @@ class EntriesScreen extends Component {
       </Container>
     );
   }
-
 }
 
-/* state.entries is an object that has many key value pairs
-for each key value pair '_.map' run the function. Takes all
-the returned objects (entries) and put it in an array */
 const mapStateToProps = state => {
   const entries = _.map(state.entries, (val, uid) => {
       return { ...val, uid };
@@ -172,7 +167,6 @@ const styles = {
   subheaderText: {
     color: '#383838'
   },
-
 };
 
 export default connect(mapStateToProps, { entriesFetch })(EntriesScreen);

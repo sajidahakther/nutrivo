@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Container, Content, CardItem, Button, Text } from 'native-base';
 import { connect } from 'react-redux';
 import { entryupdate, addentry } from '../../../actions';
-// import { FormCard, SubSection, Button } from '../../common';
 import EntryForm from './entryform';
 
 class AddEntry extends Component {
@@ -17,10 +16,7 @@ class AddEntry extends Component {
     return (
       <Container style={styles.container}>
         <Content>
-          {/* Form to add meal */}
           <EntryForm {...this.props} />
-
-          {/* Press to add food entry */}
           <CardItem>
             <Button style={styles.buttonWidth} block light onPress={this.onButtonPress.bind(this)}>
               <Text style={styles.buttonText}> Add Entry </Text>

@@ -17,7 +17,6 @@ import {
 } from 'native-base';
 import { IconOutline, IconFill } from '@ant-design/icons-react-native';
 
-
 export default class OverviewScreen extends Component {
   render() {
     return (

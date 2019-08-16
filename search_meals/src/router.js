@@ -13,7 +13,7 @@ import EntriesScreen from './components/screens/entriesscreen';
 import OverviewScreen from './components/screens/overviewscreen';
 import ProfileScreen from './components/screens/profilescreen';
 
-//Entries
+//Meal Entry
 import AddEntry from './components/screens/entries/addentry';
 import EditEntry from './components/screens/entries/editentry';
 import ScanLabel from './components/screens/entries/scanlabel';
@@ -74,7 +74,7 @@ const RouterComponent = () => {
                 title="Nutrition Guide"
               />
 
-                {/* macronutrients */}
+                {/* Macronutrients */}
                 <Scene
                   key="macros"
                   component={Macros}
@@ -87,13 +87,6 @@ const RouterComponent = () => {
                   component={NutrientsToMonitor}
                   title="Nutrients"
                 />
-
-                {/* OLD Smart Food Suggestions
-                <Scene
-                  key="searchscreen"
-                  component={SearchScreen}
-                  title="Search"
-                />*/}
 
                 {/* Smart Food Suggestions */}
                 <Scene
@@ -137,29 +130,27 @@ const RouterComponent = () => {
                 component={EntriesScreen}
                 title="Entries"
               />
-                {/* form to add the meal */}
+                {/* Form to add the meal */}
                 <Scene
                   key="addentry"
                   component={AddEntry}
                   title="Add Entry"
                 />
 
-                {/* form to edit the entry */}
+                {/* Form to edit the entry */}
                 <Scene
                   key="editentry"
                   component={EditEntry}
                   title="Edit Entry"
                 />
 
-                {/* form to add image */}
+                {/* Form to add food label */}
                 <Scene
                   key="scanlabel"
                   component={ScanLabel}
                   title="Scan Nutrition Label"
                 />
               </Scene>
-
-
 
               {/* OVERVIEW SCREEN */}
               <Scene

@@ -45,7 +45,7 @@ const styles = {
     textAlign: 'center',
   },
   container: {
-    backgroundColor: 'rgba(0,0,0,0.75)', // oppacity
+    backgroundColor: 'rgba(0,0,0,0.75)',
     position: 'relative',
     flex: 1,
     justifyContent: 'center'

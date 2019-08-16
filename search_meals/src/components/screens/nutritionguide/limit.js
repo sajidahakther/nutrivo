@@ -4,7 +4,6 @@ import { Accordion } from 'native-base';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
-// import LimitList from './components/limitlist';
 
 const dataArray = [
 {

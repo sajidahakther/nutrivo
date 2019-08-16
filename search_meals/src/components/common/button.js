@@ -22,7 +22,6 @@ const styles = {
     fontWeight: 'bold',
     paddingTop: 10,
     paddingBottom: 10,
-    // letterSpacing: 1,
     textTransform: 'uppercase'
   },
   buttonStyle: {

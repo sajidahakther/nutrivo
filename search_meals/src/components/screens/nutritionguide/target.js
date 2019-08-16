@@ -4,7 +4,6 @@ import { Accordion } from 'native-base';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 import reducers from './reducers';
-// import TargetList from './components/targetlist';
 
 const dataArray = [
 {
@@ -41,7 +40,6 @@ const Target = () => {
   return (
     <Provider store={createStore(reducers)}>
       <View style={{ flex: 1 }}>
-      {/* <TargetList /> */}
       <Accordion
         dataArray={dataArray}
         renderContent={this._renderContent}

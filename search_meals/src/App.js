@@ -4,7 +4,6 @@ import { createStore, applyMiddleware } from 'redux';
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
 import reducers from './reducers';
-// import LoginForm from './components/loginform';
 import Router from './router';
 
 class App extends Component {
@@ -17,7 +16,7 @@ class App extends Component {
       storageBucket: 'nutrivoapp.appspot.com',
       messagingSenderId: '915474295629'
     };
-    firebase.initializeApp(config);
+  firebase.initializeApp(config);
 }
 
   render() {

@@ -12,7 +12,6 @@ const SubSection = (props) => {
 const styles = {
   containerStyle: {
     padding: 5,
-    // backgroundColor: '#fff',
     justifyContent: 'flex-start',
     flexDirection: 'row',
     position: 'relative'

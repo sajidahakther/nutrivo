@@ -10,9 +10,6 @@ class EditEntry extends Component {
 
   state = { showModal: false };
 
-  /* iterating over every property on that object and updating the reducer with
-  every property - taking all the attributes of the meal entry and putting them
-  as pre-filled value inside the form reducer */
   componentWillMount() {
     _.each(this.props.entry, (value, prop) => {
       this.props.entryupdate({ prop, value });

@@ -30,5 +30,4 @@ const mapStateToProps = state => {
   return { data: state.libraries };
 };
 
-// 'connect' forges a connection with react and redux
 export default connect(mapStateToProps)(TargetList);

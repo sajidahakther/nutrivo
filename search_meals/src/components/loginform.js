@@ -5,12 +5,9 @@ import { connect } from 'react-redux';
 import { emailChanged, passwordChanged, loginUser } from '../actions';
 import { SubSection, Input, Button, Spinner, FormSection, FormCard } from './common';
 
-// backgroung image is free to use and originally from unsplash: https://unsplash.com/photos/nTZOILVZuOg, edited by me.
 const nutrivobg = require('./assets/testbg.png');
 
-// redux will be in charge of the value of the email and pass
 class LoginForm extends Component {
-
   onEmailChange(text) {
     this.props.emailChanged(text);
   }
@@ -21,7 +18,6 @@ class LoginForm extends Component {
 
   onButtonPress() {
     const { email, password } = this.props;
-
     this.props.loginUser({ email, password });
   }
 
@@ -58,7 +54,6 @@ class LoginForm extends Component {
         <FormCard>
           <FormSection>
             <Input
-              // label="Email"
               placeholder="Email"
               onChangeText={this.onEmailChange.bind(this)}
               value={this.props.email}
@@ -68,7 +63,6 @@ class LoginForm extends Component {
           <FormSection>
           <Input
             secureTextEntry
-            // label="Password"
             placeholder="Password"
             onChangeText={this.onPasswordChange.bind(this)}
             value={this.props.password}

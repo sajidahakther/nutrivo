@@ -1,5 +1,3 @@
-// showing the entries on the screen from the database
-
 import {
   ENTRIES_FETCH_SUCCESS
 } from '../actions/types';
