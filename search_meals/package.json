@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "@ant-design/icons-react-native": "^1.0.2",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "canvasjs": "^1.8.1",
     "chart.js": "^2.8.0",
     "eslint-config-rallycoding": "^3.2.0",
